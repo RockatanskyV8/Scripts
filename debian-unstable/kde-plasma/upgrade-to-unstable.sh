@@ -1,5 +1,5 @@
 #!/bin/bash
-source 0-config.sh
+source config.sh
 
 # configures the unstable repo
 sudo bash -c "cat > /etc/apt/sources.list <<- EOM

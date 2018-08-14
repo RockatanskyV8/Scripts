@@ -1,5 +1,5 @@
 #!/bin/bash
-source 0-config.sh
+source config.sh
 
 # updates the system repos
 sudo apt update
