@@ -82,7 +82,7 @@ fi
 # installs Nvidia legacy drivers for G94
 if [[ $install_nvidia_340xx == "yes" ]]; then
 sudo apt install linux-headers-$(uname -r) -y
-sudo apt install nvidia-legacy-340xx-driver -y
+sudo apt install nvidia-340 -y
 
 # fixes vsync issues
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
@@ -185,10 +185,7 @@ sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install virtualbox -y
 sudo gpasswd -a $username vboxusers
-sudo mkdir /tmp/virtualbox
-sudo wget https://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack -P /tmp/virtualbox
-sudo VBoxManage extpack install --replace /tmp/virtualbox/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
-sudo rm -r /tmp/virtualbox
+sudo apt install virtualbox-ext-pack -y
 fi
 
 # installs QBitTorrent
