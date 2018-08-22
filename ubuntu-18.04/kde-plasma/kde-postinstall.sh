@@ -249,6 +249,10 @@ sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
 sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
 sudo tar -zxvf /tmp/eclipse/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-jee-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
+sudo tar -zxvf /tmp/eclipse/eclipse-jee-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-cpp-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
+sudo tar -zxvf /tmp/eclipse/eclipse-cpp-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
 sudo rm -r /tmp/eclipse
 sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
 sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
