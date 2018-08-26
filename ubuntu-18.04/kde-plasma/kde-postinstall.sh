@@ -203,6 +203,12 @@ if [[ $install_kdenlive == "yes" ]]; then
 sudo apt install kdenlive -y
 fi
 
+# installs Steam
+if [[ $install_steam == "yes" ]]; then
+sudo apt install steam -y
+sudo apt install xboxdrv -y
+fi
+
 # development -----------------------------------------------------------------
 
 # installs git

@@ -8,7 +8,7 @@ fix_kernel_audio="yes" # only when using 4.17 or later
 fix_en_US_location_bug="yes" # needed only if installing another language
 install_ufw_firewall="yes" # already installed by default, will only activate it
 disable_mouse_acceleration="yes"
-fix_disk_instensive_lags=="yes"
+fix_disk_instensive_lags="yes"
 install_ms_fonts="yes"
 install_kde_connect="yes" # already installed by default, will allow it in the firewall
 
@@ -32,6 +32,7 @@ install_virtualbox="yes"
 install_qbittorrent="yes"
 install_gimp="yes"
 install_kdenlive="yes"
+install_steam="yes"
 
 # development
 install_git="yes"
