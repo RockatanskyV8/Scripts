@@ -307,7 +307,14 @@ if [[ $install_virtualbox == "yes" ]]; then
 sudo apt install dkms -y
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
-sudo apt install virtualbox -y
+sudo bash -c "cat >> /etc/apt/sources.list.d/virtualbox.list <<- EOM
+deb http://download.virtualbox.org/virtualbox/debian stretch contrib
+EOM"
+sudo mkdir /tmp/virtualbox
+sudo wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -P /tmp/virtualbox
+sudo apt-key add /tmp/virtualbox/oracle_vbox_2016.asc
+sudo apt update
+sudo apt install virtualbox-5.2 -y
 sudo gpasswd -a $username vboxusers
 sudo mkdir /tmp/virtualbox
 sudo wget https://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack -P /tmp/virtualbox
