@@ -42,6 +42,7 @@ install_virtualbox="yes"
 install_qbittorrent="yes"
 install_gimp="yes"
 install_kdenlive="yes"
+install_steam="yes"
 
 # development
 install_git="yes"
