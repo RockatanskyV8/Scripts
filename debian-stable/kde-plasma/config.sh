@@ -20,6 +20,7 @@ install_okular="yes"
 install_spectacle="yes"
 install_gwenview="yes"
 install_partitionmanager="yes"
+install_networkmanager="yes"
 
 # drivers
 install_all_possible_firmware="yes"

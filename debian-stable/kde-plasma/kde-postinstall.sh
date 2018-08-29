@@ -160,6 +160,23 @@ if [[ $install_partitionmanager == "yes" ]]; then
 sudo apt install partitionmanager -y
 fi
 
+
+# installs Plasma Network Manager
+if [[ $install_networkmanager == "yes" ]]; then
+sudo apt install plasma-nm -y
+sudo systemctl enable wpa_supplicant.service
+sudo bash -c "cat > /etc/NetworkManager/NetworkManager.conf <<- EOM
+[main]
+plugins=ifupdown,keyfile
+
+[ifupdown]
+managed=true
+
+[device]
+wifi.scan-rand-mac-address=no
+EOM"
+fi
+
 # drivers ----------------------------------------------------------------------
 
 # installs all possible firmware
