@@ -170,7 +170,7 @@ sudo bash -c "cat > /etc/NetworkManager/NetworkManager.conf <<- EOM
 plugins=ifupdown,keyfile
 
 [ifupdown]
-managed=true
+managed=false
 
 [device]
 wifi.scan-rand-mac-address=no
