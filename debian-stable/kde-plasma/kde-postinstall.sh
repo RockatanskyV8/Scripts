@@ -318,6 +318,10 @@ if [[ $install_steam == "yes" ]]; then
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install steam -y
+# fixes Steam libGl.so.1 issue with 340xx driver
+if [[ $install_nvidia_340xx == "yes" ]]; then
+sudo apt install libgl1-nvidia-legacy-340xx-glx:i386 -y
+fi
 fi
 
 # development -----------------------------------------------------------------
