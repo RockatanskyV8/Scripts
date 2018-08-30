@@ -348,6 +348,28 @@ sudo apt install libgl1-nvidia-legacy-340xx-glx:i386 -y
 fi
 fi
 
+# installs VMware Player
+if [[ $install_vmware_player == "yes" ]]; then
+sudo apt install build-essential -y
+sudo apt install linux-headers-$(uname -r) -y
+sudo mkdir /tmp/vmware
+sudo wget http://download3.vmware.com/software/player/file/VMware-Player-14.0.0-6661328.x86_64.bundle -P /tmp/vmware
+sudo chmod +x /tmp/vmware/VMware-Player-14.0.0-6661328.x86_64.bundle
+sudo /tmp/vmware/VMware-Player-14.0.0-6661328.x86_64.bundle --console --required --eulas-agreed
+sudo rm -r /tmp/vmware
+fi
+
+# installs VMware Workstation Pro
+if [[ $install_vmware_pro == "yes" ]]; then
+sudo apt install build-essential -y
+sudo apt install linux-headers-$(uname -r) -y
+sudo mkdir /tmp/vmware
+sudo wget http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
+sudo chmod +x /tmp/vmware/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle
+sudo /tmp/vmware/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo rm -r /tmp/vmware
+fi
+
 # development -----------------------------------------------------------------
 
 # installs git
@@ -528,3 +550,4 @@ fi
 
 # reboots the system
 sudo reboot
+
