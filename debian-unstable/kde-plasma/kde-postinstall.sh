@@ -454,5 +454,16 @@ sudo apt install apache2 -y
 sudo apt install libapache2-mod-php7.0 -y
 fi
 
+# installs Apache Tomcat
+if [[ $install_apache_tomcat == "yes" ]]; then
+sudo apt install unzip -y
+sudo mkdir /tmp/tomcat
+sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.11/bin/apache-tomcat-9.0.11.zip -P /tmp/tomcat
+sudo unzip /tmp/tomcat/apache-tomcat-9.0.11.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.11
+sudo chmod +x -R /opt/apache-tomcat-9.0.11
+sudo rm -r /tmp/tomcat
+fi
+
 # reboots the system
 sudo reboot
