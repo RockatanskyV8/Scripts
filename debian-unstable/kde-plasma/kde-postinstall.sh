@@ -300,6 +300,19 @@ if [[ $install_kdenlive == "yes" ]]; then
 sudo apt install kdenlive -y
 fi
 
+# installs Steam
+if [[ $install_steam == "yes" ]]; then
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install steam -y
+# fixes Steam libGl.so.1 issue with 340xx driver
+if [[ $install_nvidia_340xx == "yes" ]]; then
+sudo apt install libgl1-nvidia-legacy-340xx-glx:i386 -y
+echo "You installed the Nvidia legacy 340xx drivers, but Steam requires the newest one to be installed and it is not compatible. PLEASE SELECT THE CORRECT DRIVER TO LOAD (/usr/lib/nvidia/legacy-340xx), or the system will fallback to nouveau."
+sudo update-glx --config nvidia
+fi
+fi
+
 # installs VMware Player
 if [[ $install_vmware_player == "yes" ]]; then
 sudo apt install build-essential -y

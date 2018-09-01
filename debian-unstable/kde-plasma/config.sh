@@ -43,6 +43,7 @@ install_virtualbox="yes"
 install_qbittorrent="yes"
 install_gimp="yes"
 install_kdenlive="yes"
+install_steam="yes"
 install_vmware_player="yes"
 install_vmware_pro="no"
 
