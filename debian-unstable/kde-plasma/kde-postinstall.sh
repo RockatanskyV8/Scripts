@@ -305,9 +305,9 @@ if [[ $install_vmware_player == "yes" ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware
-sudo wget http://download3.vmware.com/software/player/file/VMware-Player-14.0.0-6661328.x86_64.bundle -P /tmp/vmware
-sudo chmod +x /tmp/vmware/VMware-Player-14.0.0-6661328.x86_64.bundle
-sudo /tmp/vmware/VMware-Player-14.0.0-6661328.x86_64.bundle --console --required --eulas-agreed
+sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
+sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
+sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
 sudo rm -r /tmp/vmware
 fi
 
