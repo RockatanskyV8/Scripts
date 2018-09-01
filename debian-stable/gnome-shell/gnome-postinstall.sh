@@ -117,7 +117,7 @@ fi
 
 #installs cryptsetup
 if [[ $install_cryptsetup == "yes" ]]; then
-sudo apt install cryptsetup cryptsetup-initramfs -y
+sudo apt install cryptsetup -y
 fi
 
 # installs lvm 
