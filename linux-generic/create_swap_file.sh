@@ -22,6 +22,8 @@ sudo bash -c "cat >> /etc/fstab <<- EOM
 $swap_location none swap sw 0 0
 EOM"
 
+swapon -a
+
 echo "Done!"
 else
 echo "You need to be at the /root folder to perform this operation"
