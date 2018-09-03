@@ -337,6 +337,7 @@ sudo mkdir /tmp/vmware
 sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
 sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
 sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo adduser $username disk
 sudo rm -r /tmp/vmware
 fi
 
