@@ -233,7 +233,10 @@ sudo mkdir /tmp/google-chrome
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp/google-chrome
 sudo dpkg -i /tmp/google-chrome/google-chrome-stable_current_amd64.deb
 sudo rm -r /tmp/google-chrome
+# fixes the launcher icon
+sudo sed -i 's/Icon=google-chrome/Icon=\/opt\/google\/chrome\/product_logo_256.png/' /usr/share/applications/google-chrome.desktop
 fi
+
 
 # installs VLC
 if [[ $install_vlc == "yes" ]]; then
@@ -479,11 +482,6 @@ sudo apt install php7.0-mysql -y
 # installs Apache and PHP plugin for Apache
 sudo apt install apache2 -y
 sudo apt install libapache2-mod-php7.0 -y
-fi
-
-# installs MySQL Workbench
-if [[ $install_mysql_workbench == "yes" ]]; then
-sudo apt install mysql-workbench -y
 fi
 
 # installs Apache Tomcat

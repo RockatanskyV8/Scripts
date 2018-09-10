@@ -533,11 +533,6 @@ sudo apt install apache2 -y
 sudo apt install libapache2-mod-php7.0 -y
 fi
 
-# installs MySQL Workbench
-if [[ $install_mysql_workbench == "yes" ]]; then
-sudo apt install mysql-workbench -y
-fi
-
 # installs Apache Tomcat
 if [[ $install_apache_tomcat == "yes" ]]; then
 sudo apt install unzip -y
