@@ -320,6 +320,8 @@ StartupWMClass=jetbrains-studio
 EOM"
 sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
+sudo apt install qemu-kvm -y
+sudo adduser $username kvm
 fi
 
 # installs Pycharm Community
