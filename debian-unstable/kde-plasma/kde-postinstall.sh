@@ -321,6 +321,8 @@ if [[ $install_steam == "yes" ]]; then
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install steam -y
+# fixes libcurl.so problems when starting some games
+sudo ln -s /usr/lib/x86_64-linux-gnu/libcurl.so.4.5.0 /usr/lib/x86_64-linux-gnu//libcurl.so
 # fixes Steam libGl.so.1 issue with 340xx driver
 if [[ $install_nvidia_340xx == "yes" ]]; then
 sudo apt install libgl1-nvidia-legacy-340xx-glx:i386 -y
@@ -498,12 +500,12 @@ sudo apt install mariadb-client -y
 sudo apt install mariadb-server -y
 
 # installs PHP 7.0 and MySQL connector
-sudo apt install php7.0 -y
-sudo apt install php7.0-mysql -y
+sudo apt install php7.3 -y
+sudo apt install php7.3-mysql -y
 
 # installs Apache and PHP plugin for Apache
 sudo apt install apache2 -y
-sudo apt install libapache2-mod-php7.0 -y
+sudo apt install libapache2-mod-php7.3 -y
 fi
 
 # installs Apache Tomcat
