@@ -375,17 +375,8 @@ fi
 
 # installs lamp-server
 if [[ $install_lamp_server == "yes" ]]; then
-# installs MariaDB Server
-sudo apt install mariadb-client -y
-sudo apt install mariadb-server -y
-
-# installs PHP 7.0 and MySQL connector
-sudo apt install php7.0 -y
-sudo apt install php7.0-mysql -y
-
-# installs Apache and PHP plugin for Apache
-sudo apt install apache2 -y
-sudo apt install libapache2-mod-php7.0 -y
+sudo apt install tasksel -y
+sudo tasksel install lamp-server
 fi
 
 # installs Apache Tomcat
