@@ -332,6 +332,11 @@ sudo update-glx --config nvidia
 fi
 fi
 
+# installs minitube
+if [[ $install_minitube == "yes" ]]; then
+    sudo apt install minitube -y
+fi
+
 # installs VMware Player
 if [[ $install_vmware_player == "yes" ]]; then
 sudo apt install build-essential -y
