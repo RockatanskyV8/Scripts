@@ -4,6 +4,8 @@ username="your-username-here"
 # system
 add_fstab_lines="yes"
 fstab_lines="# add your fstab extra lines here to be appended"
+add_crypttab_lines="yes"
+crypttab_lines="# add your crypttab extra lines here to be appended"
 fix_en_US_location_bug="yes" # needed only if installing another language
 install_ufw_firewall="yes"
 fix_sudden_volume_spikes="yes"

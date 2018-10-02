@@ -16,6 +16,13 @@ $fstab_lines
 EOM"
 fi
 
+# adds the crypttab lines
+if [[ $add_crypttab_lines == "yes" ]]; then
+sudo bash -c "cat >> /etc/crypttab <<- EOM
+$crypttab_lines
+EOM"
+fi
+
 # fixes en-us language
 if [[ $fix_en_US_location_bug == "yes" ]]; then
 sudo bash -c "cat >> /etc/locale.gen <<- EOM
