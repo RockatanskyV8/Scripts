@@ -156,6 +156,12 @@ sudo rm -rf /tmp/vbox-iso
 sudo adduser $username vboxsf
 fi
 
+# installs qemu spice vdagent and qlx driver
+if [[ $install_qemu_spice_qlx == "yes" ]]; then
+sudo apt install spice-vdagent -y
+sudo apt install xserver-xorg-video-qlx -y
+fi
+
 # extra ----------------------------------------------------------------------
 
 # sets /etc/hosts file
@@ -271,6 +277,17 @@ sudo mkdir /tmp/virtualbox
 sudo wget https://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack -P /tmp/virtualbox
 sudo VBoxManage extpack install --replace /tmp/virtualbox/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
 sudo rm -r /tmp/virtualbox
+fi
+
+# installs qemu
+if [[ $install_qemu == "yes" ]]; then
+#https://wiki.debian.org/KVM
+sudo apt install qemu-kvm -y
+sudo apt install libvirt-clients -y
+sudo apt install libvirt-daemon-system -y
+sudo apt install virt-manager -y
+sudo adduser $username libvirt
+sudo adduser $username libvirt-qemu
 fi
 
 # installs QBitTorrent
