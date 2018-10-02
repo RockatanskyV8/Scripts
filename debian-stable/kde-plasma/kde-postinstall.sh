@@ -554,10 +554,10 @@ fi
 if [[ $install_apache_tomcat == "yes" ]]; then
 sudo apt install unzip -y
 sudo mkdir /tmp/tomcat
-sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.11/bin/apache-tomcat-9.0.11.zip -P /tmp/tomcat
-sudo unzip /tmp/tomcat/apache-tomcat-9.0.11.zip -d /opt
-sudo chown $username -R /opt/apache-tomcat-9.0.11
-sudo chmod +x -R /opt/apache-tomcat-9.0.11
+sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.12/bin/apache-tomcat-9.0.12.zip -P /tmp/tomcat
+sudo unzip /tmp/tomcat/apache-tomcat-9.0.12.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.12
+sudo chmod +x -R /opt/apache-tomcat-9.0.12
 sudo rm -r /tmp/tomcat
 fi
 
