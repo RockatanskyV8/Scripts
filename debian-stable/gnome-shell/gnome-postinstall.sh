@@ -163,10 +163,10 @@ sudo rm -rf /tmp/vbox-iso
 sudo adduser $username vboxsf
 fi
 
-# installs qemu spice vdagent and qlx driver
+# installs qemu spice vdagent and qxl driver
 if [[ $install_qemu_spice_qlx == "yes" ]]; then
 sudo apt install spice-vdagent -y
-sudo apt install xserver-xorg-video-qlx -y
+sudo apt install xserver-xorg-video-qxl -y
 fi
 
 # extra ----------------------------------------------------------------------
