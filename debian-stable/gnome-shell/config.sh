@@ -21,7 +21,7 @@ install_lvm="yes"
 install_all_possible_firmware="yes"
 install_nvidia_340xx="yes"
 virtualbox_guest_additions="yes"
-install_qemu_spice_qlx="yes"
+install_qemu_spice_qxl="yes"
 
 # extra
 install_someonewhocares_hosts_file="yes"

@@ -216,7 +216,7 @@ sudo adduser $username vboxsf
 fi
 
 # installs qemu spice vdagent and qxl driver
-if [[ $install_qemu_spice_qlx == "yes" ]]; then
+if [[ $install_qemu_spice_qxl == "yes" ]]; then
 sudo apt install spice-vdagent -y
 sudo apt install xserver-xorg-video-qxl -y
 fi
@@ -342,6 +342,7 @@ sudo apt install qemu-kvm -y
 sudo apt install libvirt-clients -y
 sudo apt install libvirt-daemon-system -y
 sudo apt install virt-manager -y
+sudo apt install libguestfs-tools -y
 sudo adduser $username libvirt
 sudo adduser $username libvirt-qemu
 fi
@@ -567,6 +568,8 @@ sudo chown $username -R /opt/apache-tomcat-9.0.12
 sudo chmod +x -R /opt/apache-tomcat-9.0.12
 sudo rm -r /tmp/tomcat
 fi
+
+sudo apt autoremove -y
 
 # reboots the system
 sudo reboot

@@ -7,13 +7,13 @@ deb http://ftp.br.debian.org/debian/ unstable main contrib non-free
 deb-src http://ftp.br.debian.org/debian/ unstable main contrib non-free
 EOM"
 
-# adds the option to install from stable - clementine will always be installed from stable (the unstable version has a bug with the icons)
+# adds the option to install from stable - ark from unstable has a bug with zipping from the gui, so will be installed from stable
 sudo bash -c "cat > /etc/apt/preferences.d/stable.pref <<- EOM
 Package: *
 Pin: release a=stable
 Pin-Priority: 50
 
-Package: clementine
+Package: ark
 Pin: release a=stable
 Pin-Priority: 1000
 EOM"
