@@ -407,6 +407,8 @@ fi
 if [[ $install_gitkraken == "yes" ]]; then
 sudo apt install gconf2 gvfs-bin -y
 sudo mkdir /tmp/gitkraken
+sudo wget http://ftp.br.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb -P /tmp/gitkraken
+sudo dpkg -i /tmp/gitkraken/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
 sudo wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -P /tmp/gitkraken
 sudo dpkg -i /tmp/gitkraken/gitkraken-amd64.deb
 sudo rm -r /tmp/gitkraken
