@@ -51,14 +51,6 @@ EndSection
 EOM"
 fi
 
-#fixes system lags when doing disk intensive tasks
-if [[ $fix_disk_instensive_lags == "yes" ]]; then
-sudo bash -c "cat >> /etc/sysctl.conf <<- EOM
-vm.dirty_bytes = 250000000
-EOM"
-sudo sysctl -p
-fi
-
 # installs Microsoft fonts
 if [[ $install_ms_fonts == "yes" ]]; then
 sudo apt install ttf-mscorefonts-installer -y

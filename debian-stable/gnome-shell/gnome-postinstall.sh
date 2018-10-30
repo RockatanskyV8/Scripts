@@ -59,34 +59,24 @@ EndSection
 EOM"
 fi
 
-#fixes system lags when doing disk intensive tasks
-if [[ $fix_disk_instensive_lags == "yes" ]]; then
-sudo bash -c "cat >> /etc/sysctl.conf <<- EOM
-vm.dirty_bytes = 250000000
-EOM"
-sudo sysctl -p
-fi
-
 # installs Microsoft fonts
 if [[ $install_ms_fonts == "yes" ]]; then
 sudo apt install ttf-mscorefonts-installer -y
 fi
 
 # installs a lot of fonts
-if [[ $install_kubuntu_fonts_and_configuration == "yes" ]]; then
+if [[ $install_kubuntu_fonts == "yes" ]]; then
 sudo apt install fontconfig fontconfig-config fonts-cantarell fonts-crosextra-caladea fonts-crosextra-carlito fonts-dejavu fonts-dejavu-core fonts-dejavu-extra fonts-droid-fallback fonts-freefont-ttf fonts-liberation fonts-linuxlibertine fonts-noto-mono fonts-opensymbol fonts-sil-gentium fonts-sil-gentium-basic fonts-arphic-ukai fonts-arphic-uming fonts-beng fonts-beng-extra fonts-dejavu-core fonts-deva fonts-deva-extra fonts-droid-fallback fonts-freefont-ttf fonts-gargi fonts-gubbi fonts-gujr fonts-gujr-extra fonts-guru fonts-guru-extra fonts-indic fonts-kacst fonts-kacst-one fonts-kalapi fonts-knda fonts-lao fonts-liberation fonts-liberation2 fonts-lklug-sinhala fonts-lohit-beng-assamese fonts-lohit-beng-bengali fonts-lohit-deva fonts-lohit-gujr fonts-lohit-guru fonts-lohit-knda fonts-lohit-mlym fonts-lohit-orya fonts-lohit-taml fonts-lohit-taml-classical fonts-lohit-telu fonts-mlym fonts-nakula fonts-navilu fonts-noto-cjk fonts-noto-mono fonts-opensymbol fonts-orya fonts-orya-extra fonts-pagul fonts-sahadeva fonts-samyak-deva fonts-samyak-gujr fonts-samyak-mlym fonts-samyak-taml fonts-sarai fonts-sil-abyssinica fonts-sil-padauk fonts-taml fonts-telu fonts-telu-extra fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf fonts-tlwg-laksaman fonts-tlwg-laksaman-ttf fonts-tlwg-loma fonts-tlwg-loma-ttf fonts-tlwg-mono fonts-tlwg-mono-ttf fonts-tlwg-norasi fonts-tlwg-norasi-ttf fonts-tlwg-purisa fonts-tlwg-purisa-ttf fonts-tlwg-sawasdee fonts-tlwg-sawasdee-ttf fonts-tlwg-typewriter fonts-tlwg-typewriter-ttf fonts-tlwg-typist fonts-tlwg-typist-ttf fonts-tlwg-typo fonts-tlwg-typo-ttf fonts-tlwg-umpush fonts-tlwg-umpush-ttf fonts-tlwg-waree fonts-tlwg-waree-ttf -y
+fi
 
-# applies font configuration
+# improves font rendering
+if [[ $improve_font_rendering == "yes" ]]; then
+mkdir "/home/$username/.config"
 mkdir "/home/$username/.config/fontconfig"
 bash -c "cat >> /home/$username/.config/fontconfig/fonts.conf <<- EOM
 <?xml version='1.0'?>
 <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
 <fontconfig>
- <match target=\"font\">
-  <edit mode=\"assign\" name=\"lcdfilter\">
-   <const>lcddefault</const>
-  </edit>
- </match>
  <match target=\"font\">
   <edit mode=\"assign\" name=\"rgba\">
    <const>rgb</const>
@@ -108,10 +98,20 @@ bash -c "cat >> /home/$username/.config/fontconfig/fonts.conf <<- EOM
   </edit>
  </match>
 </fontconfig>
+EOM"]
+
+bash -c "cat >> /home/$username/.Xresources <<- EOM
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 EOM"
-tar -xvzf fonts.tar.gz fonts
-sudo cp -r fonts/* /etc/fonts
-rm -r fonts
+xrdb -merge .Xresources
+fc-cache -fv
+sudo dpkg-reconfigure fontconfig-config
+sudo dpkg-reconfigure fontconfig]]]
 fi
 
 # adds the fstab lines
