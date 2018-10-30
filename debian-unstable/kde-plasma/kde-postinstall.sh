@@ -262,12 +262,6 @@ fi
 if [[ $install_syncthing == "yes" ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
-sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM
-[syncthing]
-title=Syncthing
-description=Sycthing file synchronisation
-ports=22000/tcp|21027/udp
-EOM"
 sudo ufw allow syncthing
 sudo ufw reload
 fi
