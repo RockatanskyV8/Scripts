@@ -353,7 +353,30 @@ fi
 
 # installs minitube
 if [[ $install_minitube == "yes" ]]; then
-    sudo apt install minitube -y
+sudo apt install minitube -y
+fi
+
+# installs FreeTube
+if [[ $install_freetube == "yes" ]]; then
+sudo mkdir /tmp/freetube
+sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
+sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
+sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
+[Desktop Entry]
+Name=Free Tube
+Comment=Youtube desktop client
+GenericName=Youtube Client
+X-GNOME-FullName=FreeTube
+Exec=/opt/FreeTube-linux-x64/FreeTube %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=im-youtube
+Categories=AudioVideo;Player;
+StartupNotify=true
+EOM"
+sudo rm -r /tmp/freetube
 fi
 
 # installs VMware Player
@@ -377,6 +400,32 @@ sudo wget http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full
 sudo chmod +x /tmp/vmware/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle
 sudo /tmp/vmware/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
 sudo rm -r /tmp/vmware
+fi
+
+# installs ProtonMail desktop
+if [[ $install_protonmail_desktop == "yes" ]]; then
+sudo mkdir /tmp/protonmail
+sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
+sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo mkdir /opt/protonmail
+sudo mv /tmp/protonmail/icon.png /opt/protonmail
+sudo mv /tmp/protonmail/protonmail /opt/protonmail
+sudo chmod +x /opt/protonmail/protonmail
+sudo bash -c "cat >> /usr/share/applications/protonmail.desktop <<- EOM
+[Desktop Entry]
+Name=Proton Mail
+Comment=Secure Email desktop client
+GenericName=Mail Client
+X-GNOME-FullName=Proton Mail
+Exec=/opt/protonmail/protonmail %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/protonmail/icon.png
+Categories=Network;
+StartupNotify=true
+EOM"
+sudo rm -r /tmp/protonmail
 fi
 
 # development -----------------------------------------------------------------
