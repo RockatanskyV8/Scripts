@@ -46,11 +46,10 @@ fi
 # drivers ----------------------------------------------------------------------
 
 # installs Nvidia legacy drivers for G94
-if [[ $install_nvidia_340xx == "yes" ]]; then
-sudo dnf install xorg-x11-drv-nvidia-340xx akmod-nvidia-340xx -y
-sudo dnf install xorg-x11-drv-nvidia-340xx-cuda -y
-sudo dnf update -y
-fi
+#if [[ $install_nvidia_340xx == "yes" ]]; then
+#sudo dnf install xorg-x11-drv-nvidia-340xx akmod-nvidia-340xx -y
+#sudo dnf install xorg-x11-drv-nvidia-340xx-cuda -y
+#fi
 
 # installs virtualbox guest additions 
 if [[ $virtualbox_guest_additions == "yes" ]]; then

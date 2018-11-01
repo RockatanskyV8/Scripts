@@ -12,7 +12,7 @@ enable_rpm_fusion_repos="yes"
 improve_font_rendering="yes"
 
 # drivers
-install_nvidia_340xx="yes"
+#install_nvidia_340xx="yes"
 virtualbox_guest_additions="yes"
 install_qemu_spice_qxl="yes"
 
