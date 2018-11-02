@@ -1,0 +1,58 @@
+# after the system is installed and chroot to /mnt
+hostname="hostname"
+username="username"
+
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+hwclock --systohc
+
+echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
+echo "KEYMAP=br-abnt2" >> /etc/vconsole.conf
+
+echo $hostname >> /etc/hostname
+echo "127.0.0.1 $hostname" >> /etc/hosts
+echo "127.0.0.1 localhost" >> /etc/hosts
+echo "::1 localhost" >> /etc/hosts
+
+mkinitcpio -p linux
+
+passwd
+
+pacman -S grub
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+
+# reboot
+
+dhcpcd
+# waiting for connection
+sleep 30
+
+useradd --create-home $username
+passwd $username
+groupadd sudo
+usermod -aG sudo $username
+echo "%sudo ALL=(ALL) ALL" >> /etc/sudoers
+
+#pacman -S intel-ucode
+
+pacman -S xorg-server
+
+# will install all video drivers
+pacman -S $(pacman -Sqs xf86-video*)
+
+# plasma
+pacman -S plasma-meta kdebase kde-gtk-config
+systemctl enable sddm
+
+pacman -S networkmanager
+systemctl enable NetworkManager
+
+pacman -S haveged
+systemctl enable haveged
+
+reboot
