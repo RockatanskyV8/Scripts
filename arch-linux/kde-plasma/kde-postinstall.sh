@@ -190,8 +190,8 @@ fi
 # installs Clementine
 if [[ $install_clementine == "yes" ]]; then
 sudo pakku -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-plugin-libde265
-sudo pakku -S clementine
-sudo pakku -S qt5-styleplugins
+sudo pakku -S clementine-qt5-git
+#sudo pakku -S qt5-styleplugins
 fi
 
 # installs LibreOffice
