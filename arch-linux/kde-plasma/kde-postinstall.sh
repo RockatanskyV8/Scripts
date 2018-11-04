@@ -239,7 +239,7 @@ fi
 
 # installs minitube
 if [[ $install_minitube == "yes" ]]; then
-sudo pakku S minitube-aur
+sudo pakku -S minitube-aur
 fi
 
 # installs FreeTube
@@ -313,3 +313,32 @@ StartupNotify=true
 EOM"
 sudo rm -r /tmp/protonmail
 fi
+
+
+# development -----------------------------------------------------------------
+
+sudo mount -o remount,size=10G /tmp
+
+sudo pakku -S git
+sudo pakku -S gitkraken
+sudo pakku -S visual-studio-code-bin
+sudo pakku -S allegro
+sudo pakku -S arduino
+sudo pakku -S arduino-avr-core
+sudo usermod -aG uucp
+sudo pakku -S eclipse-java # must install the others via plugins
+# the computer may freeze
+sudo pakku -S android-studio
+sudo mkdir /opt/android-sdk
+sudo chown $username -R /opt/android-sdk
+sudo pakku -S pycharm-community-edition
+sudo pakku -S python-pip
+sudo pip install python-magic eyed3
+sudo pip install xlsxwriter
+sudo pip install nuitka
+sudo pip install youtube-dl
+sudo pip install cython
+sudo pip install pygame
+sudo pip install git+https://github.com/kivy/kivy.git@master
+sudo pakku -S mysql-workbench
+
