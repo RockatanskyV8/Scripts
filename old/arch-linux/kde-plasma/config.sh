@@ -1,5 +1,6 @@
 #!/bin/bash
 username="your-username-here"
+hostname="hostname"
 
 # system
 add_fstab_lines="yes"

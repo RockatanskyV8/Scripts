@@ -317,7 +317,7 @@ fi
 
 # development -----------------------------------------------------------------
 
-sudo mount -o remount,size=10G /tmp
+sudo mount -o remount,size=16G /tmp
 
 sudo pakku -S git
 sudo pakku -S gitkraken
@@ -326,6 +326,7 @@ sudo pakku -S allegro
 sudo pakku -S arduino
 sudo pakku -S arduino-avr-core
 sudo usermod -aG uucp
+sudo usermod -aG lock
 sudo pakku -S eclipse-java # must install the others via plugins
 # the computer may freeze
 sudo pakku -S android-studio
