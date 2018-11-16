@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S install partitionmanager
+sudo pakku -S partitionmanager
 fi
 
 if [[ $osname == "debian-9" ]]; then
