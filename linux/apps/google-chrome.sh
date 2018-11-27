@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S google-chrome
+sudo pakku -S google-chrome --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

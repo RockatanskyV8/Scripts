@@ -2,8 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S steam
-sudo pakku -S steam-native-runtime
+sudo pakku -S steam --noconfirm
+sudo pakku -S steam-native-runtime --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

@@ -4,7 +4,7 @@ source config.sh
 if [[ $osname == "arch-linux" ]]; then
 sudo mount -o remount,size=16G /tmp
 echo "The machine can freeze, be patient"
-sudo pakku -S android-studio
+sudo pakku -S android-studio --noconfirm
 sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi

@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S mysql-workbench
+sudo pakku -S mysql-workbench --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

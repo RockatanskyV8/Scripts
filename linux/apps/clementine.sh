@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S clementine-qt5-git
+sudo pakku -S clementine-qt5-git --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

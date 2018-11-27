@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S minitube-aur
+sudo pakku -S minitube-aur --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

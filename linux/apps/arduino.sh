@@ -2,8 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S arduino
-sudo pakku -S arduino-avr-core
+sudo pakku -S arduino --noconfirm
+sudo pakku -S arduino-avr-core --noconfirm
 sudo usermod -aG uucp
 sudo usermod -aG lock
 fi

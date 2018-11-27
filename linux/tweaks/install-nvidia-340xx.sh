@@ -2,8 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pacman -S nvidia-340xx
-sudo pacman -S lib32-nvidia-340xx-utils
+sudo pacman -S nvidia-340xx --noconfirm
+sudo pacman -S lib32-nvidia-340xx-utils --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

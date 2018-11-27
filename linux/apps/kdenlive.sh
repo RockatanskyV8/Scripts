@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S kdenlive
+sudo pakku -S kdenlive frei0r-plugins --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

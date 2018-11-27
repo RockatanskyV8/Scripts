@@ -2,9 +2,9 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S virtualbox-host-modules-arch
-sudo pakku -S virtualbox
-sudo pakku -S virtualbox-ext-oracle
+sudo pakku -S virtualbox-host-modules-arch --noconfirm
+sudo pakku -S virtualbox --noconfirm
+sudo pakku -S virtualbox-ext-oracle --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

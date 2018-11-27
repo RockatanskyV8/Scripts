@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S vlc
+sudo pakku -S vlc --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

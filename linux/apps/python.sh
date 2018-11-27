@@ -2,8 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo apt install python -y
-sudo apt install python-pip -y
+sudo pakku install python --noconfirm
+sudo pakku install python-pip --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

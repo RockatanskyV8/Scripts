@@ -2,9 +2,9 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pacman -S plasma-meta kdebase kde-gtk-config networkmanager haveged
+sudo pacman -S plasma-meta kdebase kde-gtk-config networkmanager haveged --noconfirm
 sudo systemctl enable haveged NetworkManager sddm
-sudo pacman -S xdg-user-dirs
+sudo pacman -S xdg-user-dirs --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

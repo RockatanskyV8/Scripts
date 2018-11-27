@@ -22,6 +22,7 @@ rm -rf pakku
 
 #sudo bash -c "cat >> /etc/pakku.conf <<- EOM
 #ViewNoDefault
+#PreserveBuilt = Enabled
 #EOM"
 
 sudo pakku -S ufw
@@ -122,9 +123,4 @@ sudo ufw enable
 sudo systemctl enable ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-fi
-
-if [[ $osname == "windows-10" ]]; then
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-exit
 fi

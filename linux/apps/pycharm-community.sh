@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S pycharm-community-edition
+sudo pakku -S pycharm-community-edition --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

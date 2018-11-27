@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S visual-studio-code-bin
+sudo pakku -S visual-studio-code-bin --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

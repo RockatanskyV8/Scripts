@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pacman -S firefox
+sudo pacman -S firefox --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

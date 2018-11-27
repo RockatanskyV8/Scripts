@@ -2,16 +2,16 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pacman -S qemu
-sudo pakku -S libvirt
-sudo pakku -S virt-manager
+sudo pakku -S qemu --noconfirm
+sudo pakku -S libvirt --noconfirm
+sudo pakku -S virt-manager --noconfirm
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt $username
 sudo usermod -aG kvm $username
-sudo pakku -S libguestfs
-sudo pakku -S ebtables
+sudo pakku -S libguestfs --noconfirm
+sudo pakku -S ebtables --noconfirm
 sudo systemctl enable ebtables
-sudo pakku -S dnsmasq
+sudo pakku -S dnsmasq --noconfirm
 sudo systemctl enable dnsmasq
 fi
 
