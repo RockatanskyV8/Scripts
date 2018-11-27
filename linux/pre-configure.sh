@@ -12,7 +12,7 @@ Include = /etc/pacman.d/mirrorlist
 EOM"
 sudo pacman -Syyu
 
-sudo pacman -S git unzip wget fuse python-pip
+sudo pacman -S git unzip wget fuse python-pip --noconfirm
 
 git clone https://aur.archlinux.org/pakku.git
 cd pakku
@@ -22,10 +22,10 @@ rm -rf pakku
 
 #sudo bash -c "cat >> /etc/pakku.conf <<- EOM
 #ViewNoDefault
-#PreserveBuilt = Enabled
+#PreserveBuilt = User
 #EOM"
 
-sudo pakku -S ufw
+sudo pakku -S ufw --noconfirm
 sudo ufw enable
 sudo systemctl enable ufw
 sudo ufw default deny incoming
