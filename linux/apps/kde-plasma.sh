@@ -2,8 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pacman -S plasma-meta kdebase kde-gtk-config networkmanager haveged --noconfirm
-sudo systemctl enable haveged NetworkManager sddm
+sudo pacman -S plasma-meta kdebase kde-gtk-config networkmanager print-manager cups haveged --noconfirm
+sudo systemctl enable haveged NetworkManager sddm org.cups.cupsd.service
 sudo pacman -S xdg-user-dirs --noconfirm
 fi
 
