@@ -14,7 +14,7 @@ sudo apt install kcalc -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install kcalc -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

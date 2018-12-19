@@ -38,7 +38,7 @@ sudo ufw reload
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install kde-connect -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

@@ -14,7 +14,7 @@ sudo apt install ark unar unzip p7zip p7zip-full -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install ark -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

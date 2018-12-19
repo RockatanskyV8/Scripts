@@ -61,7 +61,13 @@ sudo dpkg-reconfigure fontconfig
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf copr enable dawid/better_fonts -y
+sudo dnf install fontconfig-enhanced-defaults fontconfig-font-replacements -y
+sudo bash -c "cat >> /etc/fonts/local.conf <<- EOM
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig> <match target=\"font\"> <edit name=\"antialias\" mode=\"assign\"> <bool>true</bool> </edit> <edit name=\"autohint\" mode=\"assign\"> <bool>false</bool> </edit> <edit name=\"hinting\" mode=\"assign\"> <bool>true</bool> </edit> <edit name=\"hintstyle\" mode=\"assign\"> <const>hintslight</const> </edit> <edit name=\"lcdfilter\" mode=\"assign\"> <const>lcddefault</const> </edit> <edit name=\"rgba\" mode=\"assign\"> <const>rgb</const> </edit> <edit name=\"embeddedbitmap\" mode=\"assign\"> <bool>false</bool> </edit> </match> </fontconfig> 
+EOM" 
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then
