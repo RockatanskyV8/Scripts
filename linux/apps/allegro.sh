@@ -14,7 +14,7 @@ sudo apt install liballegro5-dev -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install allegro5 -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

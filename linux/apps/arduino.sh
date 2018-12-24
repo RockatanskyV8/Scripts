@@ -19,7 +19,8 @@ sudo adduser $username dialout
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install arduino -y
+sudo adduser $username dialout
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

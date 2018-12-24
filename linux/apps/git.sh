@@ -14,7 +14,7 @@ sudo apt install git -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install git -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

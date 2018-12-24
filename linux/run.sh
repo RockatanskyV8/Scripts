@@ -15,7 +15,7 @@
 # ufw for all distros except fedora-29
 # pakku for arch-linux
 # chocolatey for windows-10
-#pre-configure.sh
+#./pre-configure.sh
 
 # this will install the DE with the minimal packages possible
 # must be used with a terminal only installed os

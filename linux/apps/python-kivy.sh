@@ -20,7 +20,9 @@ sudo pip3 install git+https://github.com/kivy/kivy.git@master
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo pip3 install cython
+sudo pip3 install pygame
+sudo pip3 install git+https://github.com/kivy/kivy.git@master
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

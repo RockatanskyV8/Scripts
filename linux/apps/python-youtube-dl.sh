@@ -14,7 +14,7 @@ sudo pip3 install youtube-dl
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo pip3 install youtube-dl
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

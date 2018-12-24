@@ -30,7 +30,7 @@ sudo apt install code -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo dnf install https://packages.microsoft.com/yumrepos/vscode/code-1.30.0-1544567256.el7.x86_64.rpm -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

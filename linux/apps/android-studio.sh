@@ -54,7 +54,24 @@ sudo chown $username -R /opt/android-sdk
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-$missing
+sudo mkdir /tmp/android-studio
+sudo wget https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip -P /tmp/android-studio
+sudo unzip /tmp/android-studio/android-studio-ide-173.4670197-linux.zip -d /opt
+sudo rm -r /tmp/android-studio
+sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Android Studio
+Icon=/opt/android-studio/bin/studio.png
+Exec=\"/opt/android-studio/bin/studio.sh\" %f
+Comment=The Drive to Develop
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-studio
+EOM"
+sudo mkdir /opt/android-sdk
+sudo chown $username -R /opt/android-sdk
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then

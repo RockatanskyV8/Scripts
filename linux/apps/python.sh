@@ -17,8 +17,8 @@ sudo apt install python3-pip -y
 fi
 
 if [[ $osname == "fedora-29" ]]; then
-sudo apt install python -y
-sudo apt install python-pip -y
+sudo dnf install python -y
+sudo dnf install python-pip -y
 fi
 
 if [[ $osname == "ubuntu-18.04" ]]; then
