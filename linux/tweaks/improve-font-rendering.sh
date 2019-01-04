@@ -73,7 +73,3 @@ fi
 if [[ $osname == "ubuntu-18.04" ]]; then
 $missing
 fi
-
-if [[ $osname == "windows-10" ]]; then
-$incompatible
-fi

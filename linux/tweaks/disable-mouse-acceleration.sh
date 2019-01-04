@@ -52,7 +52,3 @@ Section \"InputClass\"
 EndSection
 EOM"
 fi
-
-if [[ $osname == "windows-10" ]]; then
-$incompatible
-fi

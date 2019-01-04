@@ -27,7 +27,3 @@ sudo apt install linux-headers-$(uname -r) -y
 sudo apt install nvidia-340 -y
 sudo apt install libgl1-nvidia-legacy-340xx-glx:i386 -y
 fi
-
-if [[ $osname == "windows-10" ]]; then
-$incompatible
-fi

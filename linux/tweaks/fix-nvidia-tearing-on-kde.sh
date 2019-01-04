@@ -35,7 +35,3 @@ sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 export KWIN_TRIPLE_BUFFER=1
 EOM"
 fi
-
-if [[ $osname == "windows-10" ]]; then
-$incompatible
-fi

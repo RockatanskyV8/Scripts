@@ -30,7 +30,3 @@ sudo bash -c "cat >> /etc/fstab <<- EOM
 $fstab_lines
 EOM"
 fi
-
-if [[ $osname == "windows-10" ]]; then
-$incompatible
-fi

@@ -35,8 +35,3 @@ sudo bash -c "cat >> /etc/hosts <<- EOM
 127.0.0.1   $hostname
 EOM"
 fi
-
-if [[ $osname == "windows-10" ]]; then
-bitsadmin /transfer download /download /priority normal http://someonewhocares.org/hosts/hosts C:\Windows\System32\drivers\etc\hosts
-attrib +r C:\Windows\System32\drivers\etc\hosts
-fi
