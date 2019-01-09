@@ -4,6 +4,8 @@ source config.sh
 if [[ $osname == "arch-linux" ]]; then
 sudo pakku -S qemu --noconfirm
 sudo pakku -S libvirt --noconfirm
+sudo pakku -S openbsd-netcat --noconfirm
+sudo pakku -S dmidecode --noconfirm
 sudo pakku -S virt-manager --noconfirm
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt $username
