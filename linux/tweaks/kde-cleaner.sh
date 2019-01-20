@@ -2,7 +2,8 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-$missing
+sudo pacman -R konqueror --noconfirm
+sudo pacman -R kwrite --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then
