@@ -1,2 +1,1 @@
-#
-C:\Python37\Scripts\pip install nuitka
+C:\Python37\Scripts\pip install nuitka

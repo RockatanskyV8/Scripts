@@ -16,7 +16,7 @@ sudo pacman -S git unzip wget fuse python-pip --noconfirm
 
 git clone https://aur.archlinux.org/pakku.git
 cd pakku
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 rm -rf pakku
 

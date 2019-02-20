@@ -1,2 +1,1 @@
-#
-choco install qbittorrent --ignorechecksum -y
+choco install qbittorrent --ignorechecksum -y --execution-timeout=0

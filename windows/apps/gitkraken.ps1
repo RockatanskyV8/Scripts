@@ -1,3 +1,1 @@
-#
-choco install gitkraken --ignorechecksum -y 
-
+choco install gitkraken --ignorechecksum -y --execution-timeout=0

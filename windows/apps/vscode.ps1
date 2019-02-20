@@ -1,2 +1,1 @@
-#
-choco install visualstudiocode --ignorechecksum -y
+choco install visualstudiocode --ignorechecksum -y --execution-timeout=0

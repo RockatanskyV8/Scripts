@@ -1,2 +1,1 @@
-#
-choco install clementine --ignorechecksum -y
+choco install clementine --ignorechecksum -y --execution-timeout=0

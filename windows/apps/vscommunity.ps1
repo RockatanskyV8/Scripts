@@ -1,2 +1,1 @@
-#
-choco install visualstudio2017community --ignorechecksum -y
+choco install visualstudio2017community --ignorechecksum -y --execution-timeout=0

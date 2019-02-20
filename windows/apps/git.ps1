@@ -1,2 +1,1 @@
-#
-choco install git --ignorechecksum -y
+choco install git --ignorechecksum -y --execution-timeout=0

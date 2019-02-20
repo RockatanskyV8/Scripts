@@ -1,2 +1,1 @@
-#
-choco install gimp --ignorechecksum -y
+choco install gimp --ignorechecksum -y --execution-timeout=0

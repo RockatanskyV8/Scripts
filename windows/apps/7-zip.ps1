@@ -1,2 +1,1 @@
-choco install 7zip --ignorechecksum -y
-
+choco install 7zip --ignorechecksum -y --execution-timeout=0

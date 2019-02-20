@@ -1,2 +1,1 @@
-#
-choco install eclipse --ignorechecksum -y
+choco install eclipse --ignorechecksum -y --execution-timeout=0

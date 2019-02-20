@@ -1,2 +1,1 @@
-choco install arduino --ignorechecksum -y
-
+choco install arduino --ignorechecksum -y --execution-timeout=0

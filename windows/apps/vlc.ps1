@@ -1,2 +1,1 @@
-#
-choco install vlc --ignorechecksum -y
+choco install vlc --ignorechecksum -y --execution-timeout=0

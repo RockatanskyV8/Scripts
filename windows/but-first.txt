@@ -1,5 +1,3 @@
 # run first in powershell as admin
-
 # Set-ExecutionPolicy Unrestricted
-
 # then, run this file .\pre-configure.ps1 

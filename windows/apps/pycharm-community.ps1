@@ -1,2 +1,1 @@
-#
-choco install pycharm-community --ignorechecksum -y
+choco install pycharm-community --ignorechecksum -y --execution-timeout=0

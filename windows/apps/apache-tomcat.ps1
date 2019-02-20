@@ -1,2 +1,1 @@
-choco install tomcat --ignorechecksum -y
-
+choco install tomcat --ignorechecksum -y --execution-timeout=0

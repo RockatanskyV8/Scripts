@@ -1,2 +1,1 @@
-#
-choco install python --ignorechecksum -y
+choco install python --ignorechecksum -y

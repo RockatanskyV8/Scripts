@@ -1,2 +1,1 @@
-
-choco install libreoffice --ignorechecksum -y
+choco install libreoffice --ignorechecksum -y --execution-timeout=0

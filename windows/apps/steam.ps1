@@ -1,2 +1,1 @@
-#
-choco install steam --ignorechecksum -y
+choco install steam --ignorechecksum -y --execution-timeout=0

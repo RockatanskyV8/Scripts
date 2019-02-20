@@ -12,6 +12,7 @@ sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 bash -c "cat >> /home/$username/.Xresources <<- EOM
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -29,6 +30,7 @@ mkdir "/home/$username/.config/fontconfig"
 cp fonts.conf "/home/$username/.config/fontconfig"
 
 bash -c "cat >> /home/$username/.Xresources <<- EOM
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -47,6 +49,7 @@ mkdir "/home/$username/.config"
 mkdir "/home/$username/.config/fontconfig"
 cp fonts.conf "/home/$username/.config/fontconfig"
 bash -c "cat >> /home/$username/.Xresources <<- EOM
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb

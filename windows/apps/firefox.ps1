@@ -1,2 +1,1 @@
-#
-choco install firefox --ignorechecksum -y
+choco install firefox --ignorechecksum -y --execution-timeout=0

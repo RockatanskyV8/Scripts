@@ -1,2 +1,1 @@
-choco install androidstudio --ignorechecksum -y
-
+choco install androidstudio --ignorechecksum -y --execution-timeout=0
