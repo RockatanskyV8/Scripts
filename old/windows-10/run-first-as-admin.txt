@@ -1,9 +1,0 @@
-# Run this command in an admin powershell to allow the system to run scripts
-Set-ExecutionPolicy Unrestricted
-
-# Run this command in an admin powershell to install Chocolatey, a package manager for Windows
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-# You have to reopen powershell as admin to run the script
-
-# Chocolatey hangs sometimes and sometimes it can be fixed by pressing enter on the powershell window
