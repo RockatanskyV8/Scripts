@@ -4,7 +4,13 @@ source config.sh
 if [[ $osname == "arch-linux" ]]; then
 sudo mount -o remount,size=16G /tmp
 echo "The machine can freeze, be patient"
-sudo pakku -S android-studio --noconfirm
+
+git clone https://aur.archlinux.org/android-studio
+cd android-studio
+makepkg -si --noconfirm
+cd ..
+rm -rf android-studio
+
 sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi

@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S partitionmanager --noconfirm
+sudo pacman -S partitionmanager --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

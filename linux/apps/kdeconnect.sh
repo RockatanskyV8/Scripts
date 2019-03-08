@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S kdeconnect --noconfirm
+sudo pacman -S kdeconnect --noconfirm
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]
 title=KDE Connect

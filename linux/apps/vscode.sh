@@ -2,7 +2,11 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S visual-studio-code-bin --noconfirm
+git clone https://aur.archlinux.org/visual-studio-code-bin
+cd visual-studio-code-bin
+makepkg -si --noconfirm
+cd ..
+rm -rf visual-studio-code-bin
 fi
 
 if [[ $osname == "debian-9" ]]; then

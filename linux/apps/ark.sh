@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S ark unrar unzip p7zip --noconfirm
+sudo pacman -S ark unrar unzip p7zip --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

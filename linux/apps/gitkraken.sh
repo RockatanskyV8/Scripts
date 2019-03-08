@@ -2,7 +2,11 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S gitkraken --noconfirm
+git clone https://aur.archlinux.org/gitkraken
+cd gitkraken
+makepkg -si --noconfirm
+cd ..
+rm -rf gitkraken
 fi
 
 if [[ $osname == "debian-9" ]]; then

@@ -2,7 +2,12 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-plugin-libde265 --noconfirm
+sudo pacman -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly --noconfirm
+git clone https://aur.archlinux.org/gst-plugin-libde265
+cd gst-plugin-libde265
+makepkg -si --noconfirm
+cd ..
+rm -rf gst-plugin-libde265
 fi
 
 if [[ $osname == "debian-9" ]]; then

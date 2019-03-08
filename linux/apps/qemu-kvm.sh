@@ -2,19 +2,33 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S qemu --noconfirm
-sudo pakku -S libvirt --noconfirm
-sudo pakku -S openbsd-netcat --noconfirm
-sudo pakku -S dmidecode --noconfirm
-sudo pakku -S virt-manager --noconfirm
+sudo pacman -S qemu --noconfirm
+sudo pacman -S libvirt --noconfirm
+sudo pacman -S openbsd-netcat --noconfirm
+sudo pacman -S dmidecode --noconfirm
+sudo pacman -S virt-manager --noconfirm
 sudo systemctl enable libvirtd
 sudo usermod -aG libvirt $username
 sudo usermod -aG kvm $username
-sudo pakku -S libguestfs --noconfirm
-sudo pakku -S ebtables --noconfirm
+sudo pacman -S ebtables --noconfirm
 sudo systemctl enable ebtables
-sudo pakku -S dnsmasq --noconfirm
+sudo pacman -S dnsmasq --noconfirm
 sudo systemctl enable dnsmasq
+git clone https://aur.archlinux.org/perl-sys-virt
+cd perl-sys-virt
+makepkg -si --noconfirm
+cd ..
+rm -rf perl-sys-virt
+git clone https://aur.archlinux.org/hivex
+cd hivex
+makepkg -si --noconfirm
+cd ..
+rm -rf hivex
+git clone https://aur.archlinux.org/libguestfs
+cd libguestfs
+makepkg -si --noconfirm
+cd ..
+rm -rf libguestfs
 fi
 
 if [[ $osname == "debian-9" ]]; then

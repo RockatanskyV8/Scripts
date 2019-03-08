@@ -2,7 +2,12 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S ttf-dejavu ttf-droid ttf-croscore ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family ttf-ms-fonts --noconfirm
+sudo pacman -S ttf-dejavu ttf-droid ttf-croscore ttf-roboto noto-fonts ttf-liberation ttf-ubuntu-font-family --noconfirm
+git clone https://aur.archlinux.org/ttf-ms-fonts
+cd ttf-ms-fonts
+makepkg -si --noconfirm
+cd ..
+rm -rf ttf-ms-fonts
 fi
 
 if [[ $osname == "debian-9" ]]; then

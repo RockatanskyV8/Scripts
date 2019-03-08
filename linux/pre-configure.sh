@@ -14,18 +14,7 @@ sudo pacman -Syyu
 
 sudo pacman -S git unzip wget fuse python-pip --noconfirm
 
-git clone https://aur.archlinux.org/pakku.git
-cd pakku
-makepkg -si --noconfirm
-cd ..
-rm -rf pakku
-
-#sudo bash -c "cat >> /etc/pakku.conf <<- EOM
-#ViewNoDefault
-#PreserveBuilt = User
-#EOM"
-
-sudo pakku -S ufw --noconfirm
+sudo pacman -S ufw --noconfirm
 sudo ufw enable
 sudo systemctl enable ufw
 sudo ufw default deny incoming

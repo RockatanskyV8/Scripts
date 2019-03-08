@@ -2,7 +2,11 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S clementine-qt5-git --noconfirm
+git clone https://aur.archlinux.org/clementine-qt5-git
+cd clementine-qt5-git
+makepkg -si --noconfirm
+cd ..
+rm -rf clementine-qt5-git
 fi
 
 if [[ $osname == "debian-9" ]]; then

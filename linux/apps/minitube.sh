@@ -2,7 +2,11 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S minitube-aur --noconfirm
+git clone https://aur.archlinux.org/minitube-aur
+cd minitube-aur
+makepkg -si --noconfirm
+cd ..
+rm -rf minitube-aur
 fi
 
 if [[ $osname == "debian-9" ]]; then

@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S spectacle --noconfirm
+sudo pacman -S spectacle --noconfirm
 fi
 
 if [[ $osname == "debian-9" ]]; then

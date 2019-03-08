@@ -2,7 +2,11 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S google-chrome --noconfirm
+git clone https://aur.archlinux.org/google-chrome
+cd google-chrome
+makepkg -si --noconfirm
+cd ..
+rm -rf google-chrome
 fi
 
 if [[ $osname == "debian-9" ]]; then

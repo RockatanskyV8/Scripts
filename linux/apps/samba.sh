@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S samba --noconfirm
+sudo pacman -S samba --noconfirm
 sudo systemctl enable smbd nmbd
 sudo cp smb.conf /etc/samba
 sudo smbpasswd -a $username

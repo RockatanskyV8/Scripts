@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == "arch-linux" ]]; then
-sudo pakku -S syncthing --noconfirm
+sudo pacman -S syncthing --noconfirm
 sudo systemctl enable syncthing@$username.service
 sudo ufw allow syncthing
 sudo ufw reload
