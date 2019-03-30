@@ -1,7 +1,7 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 git clone https://aur.archlinux.org/google-chrome
 cd google-chrome
 makepkg -si --noconfirm
@@ -9,33 +9,33 @@ cd ..
 rm -rf google-chrome
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install libappindicator3-1 -y
 sudo mkdir /tmp/google-chrome
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp/google-chrome
-sudo dpkg -i /tmp/google-chrome/google-chrome-stable_current_amd64.deb
+sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb
+sudo dpkg -i /tmp/google-chrome/google-chrome.deb
 sudo rm -r /tmp/google-chrome
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install libappindicator3-1 -y
 sudo mkdir /tmp/google-chrome
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp/google-chrome
-sudo dpkg -i /tmp/google-chrome/google-chrome-stable_current_amd64.deb
+sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb
+sudo dpkg -i /tmp/google-chrome/google-chrome.deb
 sudo rm -r /tmp/google-chrome
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo mkdir /tmp/google-chrome
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -P /tmp/google-chrome
-sudo dnf localinstall /tmp/google-chrome/google-chrome-stable_current_x86_64.rpm -y
+sudo wget $link_google_chrome_rpm -O /tmp/google-chrome/google-chrome.rpm
+sudo dnf localinstall /tmp/google-chrome/google-chrome.rpm -y
 sudo rm -r /tmp/google-chrome
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install libappindicator3-1 -y
 sudo mkdir /tmp/google-chrome
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp/google-chrome
-sudo dpkg -i /tmp/google-chrome/google-chrome-stable_current_amd64.deb
+sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb
+sudo dpkg -i /tmp/google-chrome/google-chrome.deb
 sudo rm -r /tmp/google-chrome
 fi

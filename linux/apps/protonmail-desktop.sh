@@ -1,10 +1,10 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo mkdir /tmp/protonmail
-sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
-sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
+sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
 sudo mkdir /opt/protonmail
 sudo mv /tmp/protonmail/icon.png /opt/protonmail
 sudo mv /tmp/protonmail/protonmail /opt/protonmail
@@ -26,10 +26,10 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo mkdir /tmp/protonmail
-sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
-sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
+sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
 sudo mkdir /opt/protonmail
 sudo mv /tmp/protonmail/icon.png /opt/protonmail
 sudo mv /tmp/protonmail/protonmail /opt/protonmail
@@ -51,10 +51,10 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo mkdir /tmp/protonmail
-sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
-sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
+sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
 sudo mkdir /opt/protonmail
 sudo mv /tmp/protonmail/icon.png /opt/protonmail
 sudo mv /tmp/protonmail/protonmail /opt/protonmail
@@ -76,10 +76,10 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo mkdir /tmp/protonmail
-sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
-sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
+sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
 sudo mkdir /opt/protonmail
 sudo mv /tmp/protonmail/icon.png /opt/protonmail
 sudo mv /tmp/protonmail/protonmail /opt/protonmail
@@ -101,10 +101,10 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo mkdir /tmp/protonmail
-sudo wget https://raw.githubusercontent.com/protonmail-desktop/application/master/app/static/Icon.png -O /tmp/protonmail/icon.png
-sudo wget https://github.com/protonmail-desktop/application/releases/download/v0.5.9/protonmail-desktop-0.5.9-x86_64.AppImage -O /tmp/protonmail/protonmail
+sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
+sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
 sudo mkdir /opt/protonmail
 sudo mv /tmp/protonmail/icon.png /opt/protonmail
 sudo mv /tmp/protonmail/protonmail /opt/protonmail

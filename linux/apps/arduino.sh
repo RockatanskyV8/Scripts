@@ -1,29 +1,29 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S arduino --noconfirm
 sudo pacman -S arduino-avr-core --noconfirm
 sudo usermod -aG uucp
 sudo usermod -aG lock
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install arduino -y
 sudo adduser $username dialout
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install arduino -y
 sudo adduser $username dialout
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install arduino -y
 sudo adduser $username dialout
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install arduino -y
 sudo adduser $username dialout
 fi

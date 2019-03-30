@@ -1,7 +1,7 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S samba --noconfirm
 sudo systemctl enable smbd nmbd
 sudo cp smb.conf /etc/samba
@@ -19,7 +19,7 @@ sudo ufw allow samba
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install samba -y
 sudo systemctl enable smbd
 sudo smbpasswd -a $username
@@ -30,7 +30,7 @@ sudo ufw allow samba
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install samba -y
 sudo systemctl enable smbd
 sudo smbpasswd -a $username
@@ -41,7 +41,7 @@ sudo ufw allow samba
 sudo ufw reload
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install samba -y
 sudo systemctl enable smb.service nmb.service
 sudo smbpasswd -a $username
@@ -52,7 +52,7 @@ sudo firewall-cmd --add-service=samba --permanent
 sudo firewall-cmd --reload
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install samba -y
 sudo systemctl enable smbd
 sudo smbpasswd -a $username

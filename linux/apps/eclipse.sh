@@ -1,15 +1,15 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S eclipse-java --noconfirm
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
-sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
-sudo tar -zxvf /tmp/eclipse/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
+sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
 sudo rm -r /tmp/eclipse
 sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
 sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
@@ -27,11 +27,11 @@ EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
-sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
-sudo tar -zxvf /tmp/eclipse/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
+sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
 sudo rm -r /tmp/eclipse
 sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
 sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
@@ -49,11 +49,11 @@ EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install java-1.8.0-openjdk -y
 sudo mkdir /tmp/eclipse
-sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
-sudo tar -zxvf /tmp/eclipse/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
+sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
 sudo rm -r /tmp/eclipse
 sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
 sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
@@ -70,11 +70,11 @@ StartupNotify=false
 EOM"
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
-sudo wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -P /tmp/eclipse
-sudo tar -zxvf /tmp/eclipse/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz -C /usr/
+sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
+sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
 sudo rm -r /tmp/eclipse
 sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
 sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM

@@ -1,7 +1,7 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S qemu --noconfirm
 sudo pacman -S libvirt --noconfirm
 sudo pacman -S openbsd-netcat --noconfirm
@@ -31,7 +31,7 @@ cd ..
 rm -rf libguestfs
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install qemu-kvm -y
 sudo apt install libvirt-clients -y
 sudo apt install libvirt-daemon-system -y
@@ -41,7 +41,7 @@ sudo adduser $username libvirt
 sudo adduser $username libvirt-qemu
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install qemu-kvm -y
 sudo apt install libvirt-clients -y
 sudo apt install libvirt-daemon-system -y
@@ -51,7 +51,7 @@ sudo adduser $username libvirt
 sudo adduser $username libvirt-qemu
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install qemu-kvm libvirt virt-install bridge-utils virt-manager libguestfs-tools -y
 sudo usermod -a -G libvirt $username
 sudo usermod -a -G qemu $username
@@ -64,6 +64,6 @@ sudo nmcli connection del ens3
 sudo nmcli connection add type bridge-slave autoconnect yes con-name ens3 ifname ens3 master br0 
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 $missing
 fi

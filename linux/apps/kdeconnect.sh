@@ -1,7 +1,7 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S kdeconnect --noconfirm
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]
@@ -13,7 +13,7 @@ sudo ufw allow kdeconnect
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install kdeconnect -y
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]
@@ -25,7 +25,7 @@ sudo ufw allow kdeconnect
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install kdeconnect -y
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]
@@ -37,11 +37,11 @@ sudo ufw allow kdeconnect
 sudo ufw reload
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install kde-connect -y
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install kdeconnect -y
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]

@@ -1,7 +1,7 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 git clone https://aur.archlinux.org/visual-studio-code-bin
 cd visual-studio-code-bin
 makepkg -si --noconfirm
@@ -9,10 +9,10 @@ cd ..
 rm -rf visual-studio-code-bin
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo mkdir /tmp/code
-sudo wget https://packages.microsoft.com/keys/microsoft.asc -P /tmp/code
-sudo apt-key add /tmp/code/microsoft.asc
+sudo wget $link_vscode_key -O /tmp/code/code.asc
+sudo apt-key add /tmp/code/code.asc
 sudo rm -r /tmp/code
 sudo bash -c "cat >> /etc/apt/sources.list.d/vscode.list <<- EOM
 deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
@@ -21,10 +21,10 @@ sudo apt update
 sudo apt install code -y
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo mkdir /tmp/code
-sudo wget https://packages.microsoft.com/keys/microsoft.asc -P /tmp/code
-sudo apt-key add /tmp/code/microsoft.asc
+sudo wget $link_vscode_key -O /tmp/code/code.asc
+sudo apt-key add /tmp/code/code.asc
 sudo rm -r /tmp/code
 sudo bash -c "cat >> /etc/apt/sources.list.d/vscode.list <<- EOM
 deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
@@ -33,14 +33,14 @@ sudo apt update
 sudo apt install code -y
 fi
 
-if [[ $osname == "fedora-29" ]]; then
-sudo dnf install https://packages.microsoft.com/yumrepos/vscode/code-1.30.0-1544567256.el7.x86_64.rpm -y
+if [[ $osname == $fedora29 ]]; then
+sudo dnf install $link_vscode_rpm -y
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo mkdir /tmp/code
-sudo wget https://packages.microsoft.com/keys/microsoft.asc -P /tmp/code
-sudo apt-key add /tmp/code/microsoft.asc
+sudo wget $link_vscode_key -O /tmp/code/code.asc
+sudo apt-key add /tmp/code/code.asc
 sudo rm -r /tmp/code
 sudo bash -c "cat >> /etc/apt/sources.list.d/vscode.list <<- EOM
 deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main

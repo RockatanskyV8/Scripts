@@ -1,20 +1,20 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -R konqueror --noconfirm
 sudo pacman -R kwrite --noconfirm
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 $missing
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 $missing
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf remove dnfdragora -y
 sudo dnf remove system-config-language -y
 sudo dnf remove firewall-config -y
@@ -50,9 +50,8 @@ sudo dnf remove kmag -y
 sudo dnf remove kmousetool -y
 sudo dnf remove kmouth -y
 sudo dnf remove krusader -y
-sudo dnf install breeze-gtk -y
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 $missing
 fi

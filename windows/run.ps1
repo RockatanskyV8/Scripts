@@ -1,5 +1,7 @@
 . .\config.ps1
 
+.\pre-configure.ps1
+
 # tweaks
 
 #tweaks/

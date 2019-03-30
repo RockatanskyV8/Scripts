@@ -1,14 +1,14 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S syncthing --noconfirm
 sudo systemctl enable syncthing@$username.service
 sudo ufw allow syncthing
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM
@@ -21,21 +21,21 @@ sudo ufw allow syncthing
 sudo ufw reload
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo ufw allow syncthing
 sudo ufw reload
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo firewall-cmd --add-service=syncthing --permanent
 sudo firewall-cmd --reload
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM

@@ -1,42 +1,47 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
-sudo mkdir /tmp/tomcat
-sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.zip -P /tmp/tomcat
-sudo unzip /tmp/tomcat/apache-tomcat-9.0.16.zip -d /opt
-sudo chown $username -R /opt/apache-tomcat-9.0.16
-sudo chmod +x -R /opt/apache-tomcat-9.0.16
-sudo rm -r /tmp/tomcat
+if [[ $osname == $archlinux ]]; then
+sudo mkdir /tmp/apache-tomcat
+sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip
+sudo unzip /tmp/apache-tomcat/apache-tomcat.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.17
+sudo chmod +x -R /opt/apache-tomcat-9.0.17
+sudo rm -r /tmp/apache-tomcat
 fi
 
-if [[ $osname == "debian-9" ]]; then
-sudo mkdir /tmp/tomcat
-sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.zip -P /tmp/tomcat
-sudo unzip /tmp/tomcat/apache-tomcat-9.0.16.zip -d /opt
-sudo chown $username -R /opt/apache-tomcat-9.0.16
-sudo chmod +x -R /opt/apache-tomcat-9.0.16
-sudo rm -r /tmp/tomcat
+if [[ $osname == $debian9 ]]; then
+sudo mkdir /tmp/apache-tomcat
+sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip
+sudo unzip /tmp/apache-tomcat/apache-tomcat.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.17
+sudo chmod +x -R /opt/apache-tomcat-9.0.17
+sudo rm -r /tmp/apache-tomcat
 fi
 
-if [[ $osname == "debian-sid" ]]; then
-sudo mkdir /tmp/tomcat
-sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.zip -P /tmp/tomcat
-sudo unzip /tmp/tomcat/apache-tomcat-9.0.16.zip -d /opt
-sudo chown $username -R /opt/apache-tomcat-9.0.16
-sudo chmod +x -R /opt/apache-tomcat-9.0.16
-sudo rm -r /tmp/tomcat
+if [[ $osname == $debiansid ]]; then
+sudo mkdir /tmp/apache-tomcat
+sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip
+sudo unzip /tmp/apache-tomcat/apache-tomcat.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.17
+sudo chmod +x -R /opt/apache-tomcat-9.0.17
+sudo rm -r /tmp/apache-tomcat
 fi
 
-if [[ $osname == "fedora-29" ]]; then
-$missing
+if [[ $osname == $fedora29 ]]; then
+sudo mkdir /tmp/apache-tomcat
+sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip
+sudo unzip /tmp/apache-tomcat/apache-tomcat.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.17
+sudo chmod +x -R /opt/apache-tomcat-9.0.17
+sudo rm -r /tmp/apache-tomcat
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
-sudo mkdir /tmp/tomcat
-sudo wget http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.zip -P /tmp/tomcat
-sudo unzip /tmp/tomcat/apache-tomcat-9.0.16.zip -d /opt
-sudo chown $username -R /opt/apache-tomcat-9.0.16
-sudo chmod +x -R /opt/apache-tomcat-9.0.16
-sudo rm -r /tmp/tomcat
+if [[ $osname == $ubuntu1804 ]]; then
+sudo mkdir /tmp/apache-tomcat
+sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip
+sudo unzip /tmp/apache-tomcat/apache-tomcat.zip -d /opt
+sudo chown $username -R /opt/apache-tomcat-9.0.17
+sudo chmod +x -R /opt/apache-tomcat-9.0.17
+sudo rm -r /tmp/apache-tomcat
 fi

@@ -1,25 +1,23 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo mount -o remount,size=16G /tmp
 echo "The machine can freeze, be patient"
-
 git clone https://aur.archlinux.org/android-studio
 cd android-studio
 makepkg -si --noconfirm
 cd ..
 rm -rf android-studio
-
 sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install lib32stdc++6 unzip -y
 sudo mkdir /tmp/android-studio
-sudo wget https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip -P /tmp/android-studio
-sudo unzip /tmp/android-studio/android-studio-ide-173.4670197-linux.zip -d /opt
+sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
+sudo unzip /tmp/android-studio/android-studio.zip -d /opt
 sudo rm -r /tmp/android-studio
 sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
 [Desktop Entry]
@@ -37,11 +35,11 @@ sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install lib32stdc++6 unzip -y
 sudo mkdir /tmp/android-studio
-sudo wget https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip -P /tmp/android-studio
-sudo unzip /tmp/android-studio/android-studio-ide-173.4670197-linux.zip -d /opt
+sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
+sudo unzip /tmp/android-studio/android-studio.zip -d /opt
 sudo rm -r /tmp/android-studio
 sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
 [Desktop Entry]
@@ -59,10 +57,10 @@ sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo mkdir /tmp/android-studio
-sudo wget https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip -P /tmp/android-studio
-sudo unzip /tmp/android-studio/android-studio-ide-173.4670197-linux.zip -d /opt
+sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
+sudo unzip /tmp/android-studio/android-studio.zip -d /opt
 sudo rm -r /tmp/android-studio
 sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
 [Desktop Entry]
@@ -80,11 +78,11 @@ sudo mkdir /opt/android-sdk
 sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install lib32stdc++6 unzip -y
 sudo mkdir /tmp/android-studio
-sudo wget https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip -P /tmp/android-studio
-sudo unzip /tmp/android-studio/android-studio-ide-173.4670197-linux.zip -d /opt
+sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
+sudo unzip /tmp/android-studio/android-studio.zip -d /opt
 sudo rm -r /tmp/android-studio
 sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
 [Desktop Entry]

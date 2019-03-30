@@ -1,11 +1,11 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo mkdir /tmp/freetube
-sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
-sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
-sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo wget $link_freetube -O /tmp/freetube/freetube.zip
+sudo unzip /tmp/freetube/freetube.zip -d /opt
+sudo chmod +x /opt/freetube/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube
@@ -23,11 +23,11 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo mkdir /tmp/freetube
-sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
-sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
-sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo wget $link_freetube -O /tmp/freetube/freetube.zip
+sudo unzip /tmp/freetube/freetube.zip -d /opt
+sudo chmod +x /opt/freetube/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube
@@ -45,11 +45,11 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo mkdir /tmp/freetube
-sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
-sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
-sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo wget $link_freetube -O /tmp/freetube/freetube.zip
+sudo unzip /tmp/freetube/freetube.zip -d /opt
+sudo chmod +x /opt/freetube/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube
@@ -67,11 +67,11 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo mkdir /tmp/freetube
-sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
-sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
-sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo wget $link_freetube -O /tmp/freetube/freetube.zip
+sudo unzip /tmp/freetube/freetube.zip -d /opt
+sudo chmod +x /opt/freetube/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube
@@ -82,18 +82,18 @@ Exec=/opt/FreeTube-linux-x64/FreeTube %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=video-x-generic
+Icon=im-youtube
 Categories=AudioVideo;Player;
 StartupNotify=true
 EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo mkdir /tmp/freetube
-sudo wget https://github.com/FreeTubeApp/FreeTube/releases/download/v0.4.0-beta/FreeTube-linux-x64.zip -P /tmp/freetube
-sudo unzip /tmp/freetube/FreeTube-linux-x64.zip -d /opt
-sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
+sudo wget $link_freetube -O /tmp/freetube/freetube.zip
+sudo unzip /tmp/freetube/freetube.zip -d /opt
+sudo chmod +x /opt/freetube/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube

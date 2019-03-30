@@ -1,13 +1,13 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo pacman -S plasma-meta kdebase kde-gtk-config networkmanager print-manager cups haveged packagekit-qt5 --noconfirm
 sudo systemctl enable haveged NetworkManager sddm org.cups.cupsd.service
 sudo pacman -S xdg-user-dirs --noconfirm
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install kde-plasma-desktop sddm-theme-debian-breeze -y
 sudo systemctl enable sddm
 sudo apt install plasma-nm -y
@@ -24,7 +24,7 @@ wifi.scan-rand-mac-address=no
 EOM"
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install kde-plasma-desktop sddm-theme-debian-breeze -y
 sudo systemctl enable sddm
 sudo apt install plasma-nm -y
@@ -41,10 +41,11 @@ wifi.scan-rand-mac-address=no
 EOM"
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 $missing
+#sudo dnf install breeze-gtk -y
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 $missing
 fi

@@ -1,35 +1,35 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 #!/bin/sh
 export KWIN_TRIPLE_BUFFER=1
 EOM"
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 #!/bin/sh
 export KWIN_TRIPLE_BUFFER=1
 EOM"
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 #!/bin/sh
 export KWIN_TRIPLE_BUFFER=1
 EOM"
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 #!/bin/sh
 export KWIN_TRIPLE_BUFFER=1
 EOM"
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo bash -c "cat >> /etc/profile.d/kwin.sh <<- EOM
 #!/bin/sh
 export KWIN_TRIPLE_BUFFER=1

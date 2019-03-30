@@ -1,49 +1,49 @@
 #!/bin/bash
 source config.sh
 
-if [[ $osname == "arch-linux" ]]; then
+if [[ $osname == $archlinux ]]; then
 $missing
 fi
 
-if [[ $osname == "debian-9" ]]; then
+if [[ $osname == $debian9 ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware
-sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
-sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
-sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo wget $link_vmware -O /tmp/vmware/vmware.bundle
+sudo chmod +x /tmp/vmware/vmware.bundle
+sudo /tmp/vmware/vmware.bundle --console --required --eulas-agreed
 sudo adduser $username disk
 sudo rm -r /tmp/vmware
 fi
 
-if [[ $osname == "debian-sid" ]]; then
+if [[ $osname == $debiansid ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware
-sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
-sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
-sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo wget $link_vmware -O /tmp/vmware/vmware.bundle
+sudo chmod +x /tmp/vmware/vmware.bundle
+sudo /tmp/vmware/vmware.bundle --console --required --eulas-agreed
 sudo adduser $username disk
 sudo rm -r /tmp/vmware
 fi
 
-if [[ $osname == "fedora-29" ]]; then
+if [[ $osname == $fedora29 ]]; then
 sudo dnf install kernel-headers-$(uname -r) kernel-devel -y
 sudo mkdir /tmp/vmware
-sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
-sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
-sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo wget $link_vmware -O /tmp/vmware/vmware.bundle
+sudo chmod +x /tmp/vmware/vmware.bundle
+sudo /tmp/vmware/vmware.bundle --console --required --eulas-agreed
 sudo usermod -a -G disk $username
 sudo rm -r /tmp/vmware
 fi
 
-if [[ $osname == "ubuntu-18.04" ]]; then
+if [[ $osname == $ubuntu1804 ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware
-sudo wget https://download3.vmware.com/software/player/file/VMware-Player-14.1.3-9474260.x86_64.bundle -P /tmp/vmware
-sudo chmod +x /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle
-sudo /tmp/vmware/VMware-Player-14.1.3-9474260.x86_64.bundle --console --required --eulas-agreed
+sudo wget $link_vmware -O /tmp/vmware/vmware.bundle
+sudo chmod +x /tmp/vmware/vmware.bundle
+sudo /tmp/vmware/vmware.bundle --console --required --eulas-agreed
 sudo adduser $username disk
 sudo rm -r /tmp/vmware
 fi
