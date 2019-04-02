@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo mkdir /tmp/freetube
 sudo wget $link_freetube -O /tmp/freetube/freetube.zip
 sudo unzip /tmp/freetube/freetube.zip -d /opt
-sudo chmod +x /opt/freetube/FreeTube
+sudo chmod +x /opt/FreeTube-linux-x64/FreeTube
 sudo bash -c "cat >> /usr/share/applications/freetube.desktop <<- EOM
 [Desktop Entry]
 Name=Free Tube
