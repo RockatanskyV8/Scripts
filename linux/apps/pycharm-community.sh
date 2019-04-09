@@ -36,8 +36,8 @@ sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EO
 Version=1.0
 Type=Application
 Name=PyCharm Community Edition
-Icon=/opt/pycharm-community/bin/pycharm.png
-Exec=\"/opt/pycharm-community/bin/pycharm.sh\" %f
+Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
+Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
 Comment=The Drive to Develop
 Categories=Development;IDE;
 Terminal=false
@@ -56,8 +56,8 @@ sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EO
 Version=1.0
 Type=Application
 Name=PyCharm Community Edition
-Icon=/opt/pycharm-community/bin/pycharm.png
-Exec=\"/opt/pycharm-community/bin/pycharm.sh\" %f
+Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
+Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
 Comment=The Drive to Develop
 Categories=Development;IDE;
 Terminal=false
@@ -76,8 +76,8 @@ sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EO
 Version=1.0
 Type=Application
 Name=PyCharm Community Edition
-Icon=/opt/pycharm-community/bin/pycharm.png
-Exec=\"/opt/pycharm-community/bin/pycharm.sh\" %f
+Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
+Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
 Comment=The Drive to Develop
 Categories=Development;IDE;
 Terminal=false
