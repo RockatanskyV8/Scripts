@@ -62,6 +62,8 @@
 # apps/protonmail-desktop.sh
 # apps/retroarch.sh
 # apps/samba.sh
+# apps/keepassxc.sh
+# apps/openssh.sh
 
 # development tools
 # apps/git.sh
