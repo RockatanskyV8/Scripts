@@ -2,17 +2,18 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-$missing
+sudo pacman -S gnome --noconfirm
+sudo pacman -S gnome-software-packagekit-plugin --noconfirm
+sudo systemctl enable gdm.service
+sudo systemctl enable NetworkManager.service
 fi
 
 if [[ $osname == $debian9 ]]; then
 sudo apt install gnome-core -y
-sudo apt purge mutt tracker -y
 fi
 
 if [[ $osname == $debiansid ]]; then
 sudo apt install gnome-core -y
-sudo apt purge mutt tracker -y
 fi
 
 if [[ $osname == $fedora29 ]]; then

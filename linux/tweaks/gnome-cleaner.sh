@@ -2,15 +2,34 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-$missing
+sudo pacman -R gnome-boxes --noconfirm
+sudo pacman -R gnome-calendar --noconfirm
+sudo pacman -R gnome-books --noconfirm
+sudo pacman -R gnome-contacts --noconfirm
+sudo pacman -R gnome-documents --noconfirm
+sudo pacman -R gnome-maps --noconfirm
+sudo pacman -R gnome-music --noconfirm
+sudo pacman -R gnome-photos --noconfirm
+sudo pacman -R simple-scan --noconfirm
+sudo pacman -R gnome-todo --noconfirm
+sudo pacman -R gnome-weather --noconfirm
+sudo pacman -R totem --noconfirm
+sudo pacman -R epiphany --noconfirm
+# sudo pacman -R cheese --noconfirm # currently breakes gnome-control-center
+sudo rm /usr/share/applications/avahi-discover.desktop
+sudo rm /usr/share/applications/bssh.desktop
+sudo rm /usr/share/applications/bvnc.desktop
+sudo rm /usr/share/applications/qv4l2.desktop
+sudo rm /usr/share/applications/qvidcap.desktop
+sudo rm /usr/share/applications/nm-connection-editor.desktop
 fi
 
 if [[ $osname == $debian9 ]]; then
-$missing
+sudo apt purge mutt tracker -y
 fi
 
 if [[ $osname == $debiansid ]]; then
-$missing
+sudo apt purge mutt tracker -y
 fi
 
 if [[ $osname == $fedora29 ]]; then
