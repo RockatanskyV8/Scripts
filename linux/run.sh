@@ -29,6 +29,7 @@
 # tweaks/install-nvidia-340xx.sh
 # tweaks/fix-nvidia-tearing-on-kde.sh
 # tweaks/install-codecs.sh
+# tweaks/install-vulkan-radeon.sh
 
 # basic apps for kde
 # apps/ark.sh
@@ -56,6 +57,7 @@
 # apps/kdenlive.sh
 # apps/minitube.sh
 # apps/steam.sh
+# apps/lutris.sh
 # apps/freetube.sh
 # apps/vmware-player.sh
 # apps/vmware-workstation.sh
