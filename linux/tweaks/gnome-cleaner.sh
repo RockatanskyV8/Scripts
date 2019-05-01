@@ -34,6 +34,7 @@ fi
 
 if [[ $osname == $fedora ]]; then
 sudo dnf remove gnome-boxes -y
+sudo dnf remove gnome-calendar -y
 sudo dnf remove cheese -y
 sudo dnf remove gnome-contacts -y
 sudo dnf remove simple-scan -y

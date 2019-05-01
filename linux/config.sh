@@ -9,7 +9,7 @@ osname=$(IFS="=" read -ra ADDR <<< $(cat /etc/os-release | grep PRETTY_NAME); ec
 debianstable="Debian GNU/Linux 9 (stretch)"
 debiansid="Debian GNU/Linux 9 buster/sid"
 ubuntults="Ubuntu 18.04.2 LTS"
-fedora="Fedora 29 (Workstation Edition)"
+fedora="Fedora 30 (Workstation Edition)"
 archlinux="Arch Linux"
 
 # what runs on these conditions
@@ -41,5 +41,6 @@ link_vmware="https://download3.vmware.com/software/player/file/VMware-Player-14.
 link_vmware_workstation="http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.1.3-9474260.x86_64.bundle"
 link_vscode_key="https://packages.microsoft.com/keys/microsoft.asc"
 link_vscode_rpm="https://packages.microsoft.com/yumrepos/vscode/code-1.30.0-1544567256.el7.x86_64.rpm"
+link_mysql_workbench_rpm="https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.16-1.fc30.x86_64.rpm"
 
 link_someonewhocares_hosts="http://someonewhocares.org/hosts/hosts"

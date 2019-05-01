@@ -10,20 +10,20 @@ fi
 
 if [[ $osname == $debianstable ]]; then
 sudo apt install arduino -y
-sudo adduser $username dialout
+sudo usermod -aG dialout $username
 fi
 
 if [[ $osname == $debiansid ]]; then
 sudo apt install arduino -y
-sudo adduser $username dialout
+sudo usermod -aG dialout $username
 fi
 
 if [[ $osname == $fedora ]]; then
 sudo dnf install arduino -y
-sudo adduser $username dialout
+sudo usermod -aG dialout $username
 fi
 
 if [[ $osname == $ubuntults ]]; then
 sudo apt install arduino -y
-sudo adduser $username dialout
+sudo usermod -aG dialout $username
 fi

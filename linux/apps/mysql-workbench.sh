@@ -14,7 +14,7 @@ sudo apt install mysql-workbench -y
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf install https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-community-8.0.13-1.fc29.x86_64.rpm -y
+sudo dnf install $link_mysql_workbench_rpm -y
 fi
 
 if [[ $osname == $ubuntults ]]; then
