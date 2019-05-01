@@ -9,7 +9,7 @@ cd ..
 rm -rf minitube-aur
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 $missing
 fi
 
@@ -17,10 +17,10 @@ if [[ $osname == $debiansid ]]; then
 sudo apt install minitube -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $incompatible
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

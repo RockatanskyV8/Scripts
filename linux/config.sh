@@ -6,10 +6,10 @@ hostname=$HOSTNAME
 osname=$(IFS="=" read -ra ADDR <<< $(cat /etc/os-release | grep PRETTY_NAME); echo ${ADDR[-1]} | cut -d'"' -f 2)
 
 # should match /etc/os-release PRETTY_NAME string
-debian9="Debian GNU/Linux 9 (stretch)"
+debianstable="Debian GNU/Linux 9 (stretch)"
 debiansid="Debian GNU/Linux 9 buster/sid"
-ubuntu1804="Ubuntu 18.04.2 LTS"
-fedora29="Fedora 29 (Workstation Edition)"
+ubuntults="Ubuntu 18.04.2 LTS"
+fedora="Fedora 29 (Workstation Edition)"
 archlinux="Arch Linux"
 
 # what runs on these conditions

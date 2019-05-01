@@ -8,7 +8,7 @@ sudo systemctl enable gdm.service
 sudo systemctl enable NetworkManager.service
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install gnome-core -y
 fi
 
@@ -16,10 +16,10 @@ if [[ $osname == $debiansid ]]; then
 sudo apt install gnome-core -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

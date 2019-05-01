@@ -9,7 +9,7 @@ cd ..
 rm -rf gitkraken
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install gconf2 gvfs-bin -y
 sudo apt install libgnome-keyring-common libgnome-keyring-dev -y
 sudo mkdir /tmp/gitkraken
@@ -31,7 +31,7 @@ sudo dpkg -i /tmp/gitkraken/gitkraken.deb
 sudo rm -r /tmp/gitkraken
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install libgnome-keyring -y
 sudo mkdir /tmp/gitkraken
 sudo wget $link_gitkraken_targz -O /tmp/gitkraken/gitkraken.tar.gz
@@ -53,7 +53,7 @@ EOM"
 sudo rm -r /tmp/gitkraken
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install gconf2 gvfs-bin -y
 sudo mkdir /tmp/gitkraken
 sudo wget $link_gitkraken_deb -O /tmp/gitkraken/gitkraken.deb

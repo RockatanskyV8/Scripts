@@ -8,7 +8,7 @@ sudo usermod -aG uucp
 sudo usermod -aG lock
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install arduino -y
 sudo adduser $username dialout
 fi
@@ -18,12 +18,12 @@ sudo apt install arduino -y
 sudo adduser $username dialout
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install arduino -y
 sudo adduser $username dialout
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install arduino -y
 sudo adduser $username dialout
 fi

@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo pacman -S pycharm-community-edition --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install python3-pip -y
 sudo mkdir /tmp/pycharm-community
 sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
@@ -45,7 +45,7 @@ StartupWMClass=jetbrains-pycharm-ce
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install python3-pip -y
 sudo mkdir /tmp/pycharm-community
 sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
@@ -65,7 +65,7 @@ StartupWMClass=jetbrains-pycharm-ce
 EOM"
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install python3-pip -y
 sudo mkdir /tmp/pycharm-community
 sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz

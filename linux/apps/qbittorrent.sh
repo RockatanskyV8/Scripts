@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo pacman -S qbittorrent --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install qbittorrent -y
 fi
 
@@ -13,10 +13,10 @@ if [[ $osname == $debiansid ]]; then
 sudo apt install qbittorrent -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install qbittorrent -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install qbittorrent -y
 fi

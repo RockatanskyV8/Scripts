@@ -7,7 +7,7 @@ sudo systemctl enable haveged NetworkManager sddm org.cups.cupsd.service
 sudo pacman -S xdg-user-dirs --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install kde-plasma-desktop sddm-theme-debian-breeze -y
 sudo systemctl enable sddm
 sudo apt install plasma-nm -y
@@ -41,11 +41,11 @@ wifi.scan-rand-mac-address=no
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 #sudo dnf install breeze-gtk -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

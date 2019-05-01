@@ -23,7 +23,7 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo mkdir /tmp/freetube
 sudo wget $link_freetube -O /tmp/freetube/freetube.zip
 sudo unzip /tmp/freetube/freetube.zip -d /opt
@@ -67,7 +67,7 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo mkdir /tmp/freetube
 sudo wget $link_freetube -O /tmp/freetube/freetube.zip
 sudo unzip /tmp/freetube/freetube.zip -d /opt
@@ -89,7 +89,7 @@ EOM"
 sudo rm -r /tmp/freetube
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo mkdir /tmp/freetube
 sudo wget $link_freetube -O /tmp/freetube/freetube.zip
 sudo unzip /tmp/freetube/freetube.zip -d /opt

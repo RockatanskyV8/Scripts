@@ -24,7 +24,7 @@ xrdb -merge /home/$username/.Xresources
 fc-cache -fv
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 mkdir "/home/$username/.config"
 mkdir "/home/$username/.config/fontconfig"
 cp fonts.conf "/home/$username/.config/fontconfig"
@@ -63,7 +63,7 @@ sudo dpkg-reconfigure fontconfig-config
 sudo dpkg-reconfigure fontconfig
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf copr enable dawid/better_fonts -y
 sudo dnf install fontconfig-enhanced-defaults fontconfig-font-replacements -y
 sudo bash -c "cat >> /etc/fonts/local.conf <<- EOM
@@ -73,6 +73,6 @@ sudo bash -c "cat >> /etc/fonts/local.conf <<- EOM
 EOM" 
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

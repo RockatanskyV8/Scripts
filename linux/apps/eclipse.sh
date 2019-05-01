@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo pacman -S eclipse-java --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
 sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
@@ -49,7 +49,7 @@ EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install java-1.8.0-openjdk -y
 sudo mkdir /tmp/eclipse
 sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz
@@ -70,7 +70,7 @@ StartupNotify=false
 EOM"
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install openjdk-8-jdk -y
 sudo mkdir /tmp/eclipse
 sudo wget $link_eclipse -O /tmp/eclipse/eclipse.tar.gz

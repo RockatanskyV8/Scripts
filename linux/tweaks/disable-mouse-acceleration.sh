@@ -13,7 +13,7 @@ EndSection
 EOM"
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo mkdir /etc/X11/xorg.conf.d
 sudo bash -c "cat >> /etc/X11/xorg.conf.d/50-mouse-acceleration.conf <<- EOM
 Section \"InputClass\"
@@ -37,11 +37,11 @@ EndSection
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo mkdir /etc/X11/xorg.conf.d
 sudo bash -c "cat >> /etc/X11/xorg.conf.d/50-mouse-acceleration.conf <<- EOM
 Section \"InputClass\"

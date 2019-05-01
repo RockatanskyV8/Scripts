@@ -9,7 +9,7 @@ cd ..
 rm -rf visual-studio-code-bin
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo mkdir /tmp/code
 sudo wget $link_vscode_key -O /tmp/code/code.asc
 sudo apt-key add /tmp/code/code.asc
@@ -33,11 +33,11 @@ sudo apt update
 sudo apt install code -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install $link_vscode_rpm -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo mkdir /tmp/code
 sudo wget $link_vscode_key -O /tmp/code/code.asc
 sudo apt-key add /tmp/code/code.asc

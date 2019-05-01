@@ -6,7 +6,7 @@ sudo pacman -S vulkan-radeon --noconfirm
 sudo pacman -S lib32-vulkan-radeon --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 $missing
 fi
 
@@ -14,10 +14,10 @@ if [[ $osname == $debiansid ]]; then
 $missing
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

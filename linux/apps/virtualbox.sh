@@ -12,7 +12,7 @@ rm -rf virtualbox-ext-oracle
 sudo usermod -aG vboxusers $username
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install dkms -y
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
@@ -43,7 +43,7 @@ sudo VBoxManage extpack install --replace /tmp/virtualbox/virtualbox_ext.vbox-ex
 sudo rm -r /tmp/virtualbox
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install dkms -y
 sudo dnf install kernel-devel -y
 sudo dnf install kernel-headers-$(uname -r) -y
@@ -56,7 +56,7 @@ sudo VBoxManage extpack install --replace /tmp/virtualbox/virtualbox_ext.vbox-ex
 sudo rm -r /tmp/virtualbox
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install dkms -y
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y

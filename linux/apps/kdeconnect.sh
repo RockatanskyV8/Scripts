@@ -13,7 +13,7 @@ sudo ufw allow kdeconnect
 sudo ufw reload
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install kdeconnect -y
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]
@@ -37,11 +37,11 @@ sudo ufw allow kdeconnect
 sudo ufw reload
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install kde-connect -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install kdeconnect -y
 sudo bash -c "cat >> /etc/ufw/applications.d/kdeconnect <<- EOM
 [kdeconnect]

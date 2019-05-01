@@ -7,7 +7,7 @@ $crypttab_lines
 EOM"
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo bash -c "cat >> /etc/crypttab <<- EOM
 $crypttab_lines
 EOM"
@@ -19,13 +19,13 @@ $crypttab_lines
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo bash -c "cat >> /etc/crypttab <<- EOM
 $crypttab_lines
 EOM"
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo bash -c "cat >> /etc/crypttab <<- EOM
 $crypttab_lines
 EOM"

@@ -7,7 +7,7 @@ sudo pip install pygame
 sudo pip install git+https://github.com/kivy/kivy.git@master
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo pip3 install cython
 sudo pip3 install pygame
 sudo pip3 install git+https://github.com/kivy/kivy.git@master
@@ -19,13 +19,13 @@ sudo pip3 install pygame
 sudo pip3 install git+https://github.com/kivy/kivy.git@master
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo pip3 install cython
 sudo pip3 install pygame
 sudo pip3 install git+https://github.com/kivy/kivy.git@master
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo pip3 install cython
 sudo pip3 install pygame
 sudo pip3 install git+https://github.com/kivy/kivy.git@master

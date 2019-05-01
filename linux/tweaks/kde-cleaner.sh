@@ -6,7 +6,7 @@ sudo pacman -R konqueror --noconfirm
 sudo pacman -R kwrite --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 $missing
 fi
 
@@ -14,7 +14,7 @@ if [[ $osname == $debiansid ]]; then
 $missing
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf remove dnfdragora -y
 sudo dnf remove system-config-language -y
 sudo dnf remove firewall-config -y
@@ -52,6 +52,6 @@ sudo dnf remove kmouth -y
 sudo dnf remove krusader -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

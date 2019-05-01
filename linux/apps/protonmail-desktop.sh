@@ -26,7 +26,7 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo mkdir /tmp/protonmail
 sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
 sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
@@ -76,7 +76,7 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo mkdir /tmp/protonmail
 sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
 sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
@@ -101,7 +101,7 @@ EOM"
 sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo mkdir /tmp/protonmail
 sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
 sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail

@@ -6,7 +6,7 @@ sudo pacman -S steam --noconfirm
 sudo pacman -S steam-native-runtime --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install steam -y
 fi
 
@@ -19,11 +19,11 @@ echo "Steam requires the newest NVIDIA driver to be installed but it may not be 
 sudo update-glx --config nvidia
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install steam -y
 sudo apt install xboxdrv -y
 fi

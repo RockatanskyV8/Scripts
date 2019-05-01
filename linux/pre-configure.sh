@@ -22,7 +22,7 @@ sudo ufw default allow outgoing
 sudo ufw reload
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo chmod +x *
 sudo chmod +x apps/*
 sudo chmod +x tweaks/*
@@ -89,7 +89,7 @@ sudo apt update
 sudo apt dist-upgrade -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo chmod +x *
 sudo chmod +x apps/*
 sudo chmod +x tweaks/*
@@ -98,7 +98,7 @@ sudo su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-fr
 sudo dnf install git unzip wget fuse python-pip -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo chmod +x *
 sudo chmod +x apps/*
 sudo chmod +x tweaks/*

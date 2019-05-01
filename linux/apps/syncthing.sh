@@ -8,7 +8,7 @@ sudo ufw allow syncthing
 sudo ufw reload
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM
@@ -28,14 +28,14 @@ sudo ufw allow syncthing
 sudo ufw reload
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo firewall-cmd --add-service=syncthing --permanent
 sudo firewall-cmd --reload
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install syncthing -y
 sudo systemctl enable syncthing@$username.service
 sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM

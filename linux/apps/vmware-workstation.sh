@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 $missing
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware
@@ -27,7 +27,7 @@ sudo adduser $username disk
 sudo rm -r /tmp/vmware
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install kernel-headers-$(uname -r) kernel-devel -y
 sudo mkdir /tmp/vmware
 sudo wget $link_vmware_workstation -O /tmp/vmware/vmware-workstation.bundle
@@ -37,7 +37,7 @@ sudo usermod -a -G disk $username
 sudo rm -r /tmp/vmware
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install build-essential -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo mkdir /tmp/vmware

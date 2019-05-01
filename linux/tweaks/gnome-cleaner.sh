@@ -24,7 +24,7 @@ sudo rm /usr/share/applications/qvidcap.desktop
 sudo rm /usr/share/applications/nm-connection-editor.desktop
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt purge mutt tracker -y
 fi
 
@@ -32,7 +32,7 @@ if [[ $osname == $debiansid ]]; then
 sudo apt purge mutt tracker -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf remove gnome-boxes -y
 sudo dnf remove cheese -y
 sudo dnf remove gnome-contacts -y
@@ -51,6 +51,6 @@ sudo dnf remove evince -y
 sudo dnf remove yelp -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

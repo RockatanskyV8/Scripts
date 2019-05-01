@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 $missing
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install mariadb-client -y
 sudo apt install mariadb-server -y
 sudo apt install php7.0 -y
@@ -23,10 +23,10 @@ sudo apt install apache2 -y
 sudo apt install libapache2-mod-php7.3 -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 $missing
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo tasksel install lamp-server
 fi

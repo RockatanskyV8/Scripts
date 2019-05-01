@@ -8,7 +8,7 @@ sudo bash -c "cat >> /etc/hosts <<- EOM
 EOM"
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo wget $link_someonewhocares_hosts -O /etc/hosts
 sudo bash -c "cat >> /etc/hosts <<- EOM
 127.0.0.1   $hostname
@@ -22,14 +22,14 @@ sudo bash -c "cat >> /etc/hosts <<- EOM
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo wget $link_someonewhocares_hosts -O /etc/hosts
 sudo bash -c "cat >> /etc/hosts <<- EOM
 127.0.0.1   $hostname
 EOM"
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo wget $link_someonewhocares_hosts -O /etc/hosts
 sudo bash -c "cat >> /etc/hosts <<- EOM
 127.0.0.1   $hostname

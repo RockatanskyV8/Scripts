@@ -7,7 +7,7 @@ flat-volumes = no
 EOM"
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo bash -c "cat >> /etc/pulse/daemon.conf <<- EOM
 flat-volumes = no
 EOM"
@@ -19,12 +19,12 @@ flat-volumes = no
 EOM"
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo bash -c "cat >> /etc/pulse/daemon.conf <<- EOM
 flat-volumes = no
 EOM"
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

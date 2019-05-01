@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo pacman -S git --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install git -y
 fi
 
@@ -13,10 +13,10 @@ if [[ $osname == $debiansid ]]; then
 sudo apt install git -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install git -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install git -y
 fi

@@ -5,7 +5,7 @@ if [[ $osname == $archlinux ]]; then
 sudo pacman -S partitionmanager --noconfirm
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install partitionmanager -y
 fi
 
@@ -13,10 +13,10 @@ if [[ $osname == $debiansid ]]; then
 sudo apt install partitionmanager -y
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install kde-partitionmanager -y
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 $missing
 fi

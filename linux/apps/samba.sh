@@ -19,7 +19,7 @@ sudo ufw allow samba
 sudo ufw reload
 fi
 
-if [[ $osname == $debian9 ]]; then
+if [[ $osname == $debianstable ]]; then
 sudo apt install samba -y
 sudo systemctl enable smbd
 sudo smbpasswd -a $username
@@ -41,7 +41,7 @@ sudo ufw allow samba
 sudo ufw reload
 fi
 
-if [[ $osname == $fedora29 ]]; then
+if [[ $osname == $fedora ]]; then
 sudo dnf install samba -y
 sudo systemctl enable smb.service nmb.service
 sudo smbpasswd -a $username
@@ -52,7 +52,7 @@ sudo firewall-cmd --add-service=samba --permanent
 sudo firewall-cmd --reload
 fi
 
-if [[ $osname == $ubuntu1804 ]]; then
+if [[ $osname == $ubuntults ]]; then
 sudo apt install samba -y
 sudo systemctl enable smbd
 sudo smbpasswd -a $username
