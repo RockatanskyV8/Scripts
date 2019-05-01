@@ -50,6 +50,11 @@ sudo dnf remove kmag -y
 sudo dnf remove kmousetool -y
 sudo dnf remove kmouth -y
 sudo dnf remove krusader -y
+sudo dnf remove gnome-disk-utility -y
+sudo dnf remove setroubleshoot -y
+sudo dnf remove ibus-cangjie -y
+sudo dnf remove im-chooser -y
+sudo dnf remove system-config-users -y
 fi
 
 if [[ $osname == $ubuntults ]]; then
