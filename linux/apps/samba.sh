@@ -3,7 +3,7 @@ source config.sh
 
 if [[ $osname == $archlinux ]]; then
 sudo pacman -S samba --noconfirm
-sudo systemctl enable smbd nmbd
+sudo systemctl enable smb nmb
 sudo cp smb.conf /etc/samba
 sudo smbpasswd -a $username
 sudo bash -c "cat >> /etc/samba/smb.conf <<- EOM

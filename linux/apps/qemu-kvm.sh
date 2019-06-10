@@ -29,6 +29,13 @@ cd libguestfs
 makepkg -si --noconfirm
 cd ..
 rm -rf libguestfs
+sudo pacman -S ovmf --noconfirm
+sudo bash -c "cat >> /etc/libvirt/qemu.conf <<- EOM
+nvram = [
+    \"/usr/share/ovmf/x64/OVMF_CODE.fd:/usr/share/ovmf/x64/OVMF_VARS.fd\"
+]
+EOM"
+sudo pacman -S multipath-tools --noconfirm
 fi
 
 if [[ $osname == $debianstable ]]; then
