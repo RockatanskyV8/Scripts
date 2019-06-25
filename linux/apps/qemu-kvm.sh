@@ -14,11 +14,7 @@ sudo pacman -S ebtables --noconfirm
 sudo systemctl enable ebtables
 sudo pacman -S dnsmasq --noconfirm
 sudo systemctl enable dnsmasq
-git clone https://aur.archlinux.org/perl-sys-virt
-cd perl-sys-virt
-makepkg -si --noconfirm
-cd ..
-rm -rf perl-sys-virt
+sudo pacman -S perl-sys-virt --noconfirm
 git clone https://aur.archlinux.org/hivex
 cd hivex
 makepkg -si --noconfirm
