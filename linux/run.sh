@@ -25,7 +25,7 @@
 # tweaks/install-extra-fonts.sh
 # tweaks/install-someonewhocares-hosts.sh
 # tweaks/fix-sudden-volume-spikes.sh
-# tweaks/disable-mouse-acceleration.sh
+# tweaks/disable-xorg-mouse-acceleration.sh
 # tweaks/install-nvidia-340xx.sh
 # tweaks/fix-nvidia-tearing-on-kde.sh
 # tweaks/install-codecs.sh
