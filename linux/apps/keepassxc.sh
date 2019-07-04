@@ -14,7 +14,7 @@ $missing
 fi
 
 if [[ $osname == $fedora ]]; then
-$missing
+sudo dnf install keepassxc -y
 fi
 
 if [[ $osname == $ubuntults ]]; then

@@ -20,8 +20,8 @@ Comment=Eclipse
 Exec=/usr/bin/eclipse
 Icon=/usr/eclipse/icon.xpm
 Categories=Development;IDE;
-Terminal=false  
-Type=Application   
+Terminal=false
+Type=Application
 StartupNotify=false
 EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
@@ -42,8 +42,8 @@ Comment=Eclipse
 Exec=/usr/bin/eclipse
 Icon=/usr/eclipse/icon.xpm
 Categories=Development;IDE;
-Terminal=false  
-Type=Application   
+Terminal=false
+Type=Application
 StartupNotify=false
 EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
@@ -64,8 +64,8 @@ Comment=Eclipse
 Exec=/usr/bin/eclipse
 Icon=/usr/eclipse/icon.xpm
 Categories=Development;IDE;
-Terminal=false  
-Type=Application   
+Terminal=false
+Type=Application
 StartupNotify=false
 EOM"
 fi
@@ -85,8 +85,8 @@ Comment=Eclipse
 Exec=/usr/bin/eclipse
 Icon=/usr/eclipse/icon.xpm
 Categories=Development;IDE;
-Terminal=false  
-Type=Application   
+Terminal=false
+Type=Application
 StartupNotify=false
 EOM"
 sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64

@@ -17,7 +17,9 @@ $missing
 fi
 
 if [[ $osname == $fedora ]]; then
-$missing
+sudo dnf install openssh -y
+sudo firewall-cmd --add-service=ssh --permanent
+sudo firewall-cmd --reload
 fi
 
 if [[ $osname == $ubuntults ]]; then

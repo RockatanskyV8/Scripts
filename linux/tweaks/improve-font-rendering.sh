@@ -64,13 +64,20 @@ sudo dpkg-reconfigure fontconfig
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf copr enable dawid/better_fonts -y
-sudo dnf install fontconfig-enhanced-defaults fontconfig-font-replacements -y
-sudo bash -c "cat >> /etc/fonts/local.conf <<- EOM
-<?xml version='1.0'?>
-<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
-<fontconfig> <match target=\"font\"> <edit name=\"antialias\" mode=\"assign\"> <bool>true</bool> </edit> <edit name=\"autohint\" mode=\"assign\"> <bool>false</bool> </edit> <edit name=\"hinting\" mode=\"assign\"> <bool>true</bool> </edit> <edit name=\"hintstyle\" mode=\"assign\"> <const>hintslight</const> </edit> <edit name=\"lcdfilter\" mode=\"assign\"> <const>lcddefault</const> </edit> <edit name=\"rgba\" mode=\"assign\"> <const>rgb</const> </edit> <edit name=\"embeddedbitmap\" mode=\"assign\"> <bool>false</bool> </edit> </match> </fontconfig> 
-EOM" 
+mkdir "/home/$username/.config"
+mkdir "/home/$username/.config/fontconfig"
+cp fonts.conf "/home/$username/.config/fontconfig"
+bash -c "cat >> /home/$username/.Xresources <<- EOM
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+EOM"
+xrdb -merge /home/$username/.Xresources
+fc-cache -fv
 fi
 
 if [[ $osname == $ubuntults ]]; then

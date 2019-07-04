@@ -50,6 +50,7 @@ sudo dnf remove totem -y
 sudo dnf remove libreoffice* -y
 sudo dnf remove evince -y
 sudo dnf remove yelp -y
+sudo dnf remove flatpak -y
 fi
 
 if [[ $osname == $ubuntults ]]; then

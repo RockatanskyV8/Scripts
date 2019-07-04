@@ -20,7 +20,7 @@ sudo update-glx --config nvidia
 fi
 
 if [[ $osname == $fedora ]]; then
-$missing
+sudo dnf install steam -y
 fi
 
 if [[ $osname == $ubuntults ]]; then

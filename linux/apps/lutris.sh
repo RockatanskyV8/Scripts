@@ -17,7 +17,7 @@ $missing
 fi
 
 if [[ $osname == $fedora ]]; then
-$missing
+sudo dnf install lutris -y
 fi
 
 if [[ $osname == $ubuntults ]]; then

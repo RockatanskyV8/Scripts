@@ -24,7 +24,11 @@ sudo apt install libapache2-mod-php7.3 -y
 fi
 
 if [[ $osname == $fedora ]]; then
-$missing
+sudo dnf install httpd -y
+sudo systemctl enable httpd
+sudo dnf -y install php php-cli php-php-gettext php-mbstring php-mcrypt php-mysqlnd php-pear php-curl php-gd php-xml php-bcmath php-zip -y
+sudo dnf install mariadb-server -y
+sudo systemctl enable mariadb
 fi
 
 if [[ $osname == $ubuntults ]]; then

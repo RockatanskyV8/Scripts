@@ -58,13 +58,7 @@ if [[ $osname == $fedora ]]; then
 sudo dnf install qemu-kvm libvirt virt-install bridge-utils virt-manager libguestfs-tools -y
 sudo usermod -a -G libvirt $username
 sudo usermod -a -G qemu $username
-sudo systemctl enable libvirtd 
-sudo nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
-sudo nmcli connection modify br0 ipv4.addresses 10.0.0.30/24 ipv4.method manual 
-sudo nmcli connection modify br0 ipv4.gateway 10.0.0.1 
-sudo nmcli connection modify br0 ipv4.dns 10.0.0.1 
-sudo nmcli connection del ens3 
-sudo nmcli connection add type bridge-slave autoconnect yes con-name ens3 ifname ens3 master br0 
+sudo systemctl enable libvirtd
 fi
 
 if [[ $osname == $ubuntults ]]; then

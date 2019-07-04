@@ -41,7 +41,7 @@
 # apps/partitionmanager.sh
 
 # basic apps for gnome
-# apps/
+# apps/gnome-tweak-tool.sh
 
 # general apps
 # apps/syncthing.sh
