@@ -2,21 +2,21 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-sudo pip install youtube-dl
+    sudo pip install youtube-dl
 fi
 
 if [[ $osname == $debianstable ]]; then
-sudo pip3 install youtube-dl
+    sudo pip3 install youtube-dl
 fi
 
 if [[ $osname == $debiansid ]]; then
-sudo pip3 install youtube-dl
+    sudo pip3 install youtube-dl
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo pip3 install youtube-dl
+    sudo pip3 install youtube-dl
 fi
 
 if [[ $osname == $ubuntults ]]; then
-sudo pip3 install youtube-dl
+    sudo pip3 install youtube-dl
 fi

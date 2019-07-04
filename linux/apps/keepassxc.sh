@@ -2,21 +2,21 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-sudo pacman -S keepassxc --noconfirm
+    sudo pacman -S keepassxc --noconfirm
 fi
 
 if [[ $osname == $debianstable ]]; then
-$missing
+    $missing
 fi
 
 if [[ $osname == $debiansid ]]; then
-$missing
+    $missing
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf install keepassxc -y
+    sudo dnf install keepassxc -y
 fi
 
 if [[ $osname == $ubuntults ]]; then
-$missing
+    $missing
 fi

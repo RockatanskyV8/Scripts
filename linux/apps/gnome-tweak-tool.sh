@@ -2,21 +2,21 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-$missing
+    $missing
 fi
 
 if [[ $osname == $debianstable ]]; then
-$missing
+    $missing
 fi
 
 if [[ $osname == $debiansid ]]; then
-$missing
+    $missing
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf install gnome-tweak-tool -y
+    sudo dnf install gnome-tweak-tool -y
 fi
 
 if [[ $osname == $ubuntults ]]; then
-$missing
+    $missing
 fi

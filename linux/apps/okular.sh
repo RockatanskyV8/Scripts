@@ -2,21 +2,21 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-sudo pacman -S okular --noconfirm
+    sudo pacman -S okular --noconfirm
 fi
 
 if [[ $osname == $debianstable ]]; then
-sudo apt install okular okular-extra-backends -y
+    sudo apt install okular okular-extra-backends -y
 fi
 
 if [[ $osname == $debiansid ]]; then
-sudo apt install okular okular-extra-backends -y
+    sudo apt install okular okular-extra-backends -y
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf install okular -y
+    sudo dnf install okular -y
 fi
 
 if [[ $osname == $ubuntults ]]; then
-$missing
+    $missing
 fi

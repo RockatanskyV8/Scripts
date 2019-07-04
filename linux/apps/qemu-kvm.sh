@@ -2,65 +2,65 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-sudo pacman -S qemu --noconfirm
-sudo pacman -S libvirt --noconfirm
-sudo pacman -S openbsd-netcat --noconfirm
-sudo pacman -S dmidecode --noconfirm
-sudo pacman -S virt-manager --noconfirm
-sudo systemctl enable libvirtd
-sudo usermod -aG libvirt $username
-sudo usermod -aG kvm $username
-sudo pacman -S ebtables --noconfirm
-sudo systemctl enable ebtables
-sudo pacman -S dnsmasq --noconfirm
-sudo systemctl enable dnsmasq
-sudo pacman -S perl-sys-virt --noconfirm
-git clone https://aur.archlinux.org/hivex
-cd hivex
-makepkg -si --noconfirm
-cd ..
-rm -rf hivex
-git clone https://aur.archlinux.org/libguestfs
-cd libguestfs
-makepkg -si --noconfirm
-cd ..
-rm -rf libguestfs
-sudo pacman -S ovmf --noconfirm
-sudo bash -c "cat >> /etc/libvirt/qemu.conf <<- EOM
-nvram = [
-    \"/usr/share/ovmf/x64/OVMF_CODE.fd:/usr/share/ovmf/x64/OVMF_VARS.fd\"
-]
-EOM"
-sudo pacman -S multipath-tools --noconfirm
+    sudo pacman -S qemu --noconfirm
+    sudo pacman -S libvirt --noconfirm
+    sudo pacman -S openbsd-netcat --noconfirm
+    sudo pacman -S dmidecode --noconfirm
+    sudo pacman -S virt-manager --noconfirm
+    sudo systemctl enable libvirtd
+    sudo usermod -aG libvirt $username
+    sudo usermod -aG kvm $username
+    sudo pacman -S ebtables --noconfirm
+    sudo systemctl enable ebtables
+    sudo pacman -S dnsmasq --noconfirm
+    sudo systemctl enable dnsmasq
+    sudo pacman -S perl-sys-virt --noconfirm
+    git clone https://aur.archlinux.org/hivex
+    cd hivex
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf hivex
+    git clone https://aur.archlinux.org/libguestfs
+    cd libguestfs
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf libguestfs
+    sudo pacman -S ovmf --noconfirm
+    sudo bash -c "cat >> /etc/libvirt/qemu.conf <<- EOM
+    nvram = [
+        \"/usr/share/ovmf/x64/OVMF_CODE.fd:/usr/share/ovmf/x64/OVMF_VARS.fd\"
+    ]
+    EOM"
+    sudo pacman -S multipath-tools --noconfirm
 fi
 
 if [[ $osname == $debianstable ]]; then
-sudo apt install qemu-kvm -y
-sudo apt install libvirt-clients -y
-sudo apt install libvirt-daemon-system -y
-sudo apt install virt-manager -y
-sudo apt install libguestfs-tools -y
-sudo adduser $username libvirt
-sudo adduser $username libvirt-qemu
+    sudo apt install qemu-kvm -y
+    sudo apt install libvirt-clients -y
+    sudo apt install libvirt-daemon-system -y
+    sudo apt install virt-manager -y
+    sudo apt install libguestfs-tools -y
+    sudo adduser $username libvirt
+    sudo adduser $username libvirt-qemu
 fi
 
 if [[ $osname == $debiansid ]]; then
-sudo apt install qemu-kvm -y
-sudo apt install libvirt-clients -y
-sudo apt install libvirt-daemon-system -y
-sudo apt install virt-manager -y
-sudo apt install libguestfs-tools -y
-sudo adduser $username libvirt
-sudo adduser $username libvirt-qemu
+    sudo apt install qemu-kvm -y
+    sudo apt install libvirt-clients -y
+    sudo apt install libvirt-daemon-system -y
+    sudo apt install virt-manager -y
+    sudo apt install libguestfs-tools -y
+    sudo adduser $username libvirt
+    sudo adduser $username libvirt-qemu
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo dnf install qemu-kvm libvirt virt-install bridge-utils virt-manager libguestfs-tools -y
-sudo usermod -a -G libvirt $username
-sudo usermod -a -G qemu $username
-sudo systemctl enable libvirtd
+    sudo dnf install qemu-kvm libvirt virt-install bridge-utils virt-manager libguestfs-tools -y
+    sudo usermod -a -G libvirt $username
+    sudo usermod -a -G qemu $username
+    sudo systemctl enable libvirtd
 fi
 
 if [[ $osname == $ubuntults ]]; then
-$missing
+    $missing
 fi
