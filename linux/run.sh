@@ -19,15 +19,13 @@
 # tweaks/gnome-cleaner.sh
 
 # general system tweaks
-# tweaks/add-crypttab-lines.sh
-# tweaks/add-fstab-lines.sh
 # tweaks/improve-font-rendering.sh
 # tweaks/install-extra-fonts.sh
 # tweaks/install-someonewhocares-hosts.sh
 # tweaks/fix-sudden-volume-spikes.sh
 # tweaks/disable-xorg-mouse-acceleration.sh
 # tweaks/install-nvidia-340xx.sh
-# tweaks/fix-nvidia-tearing-on-kde.sh
+# tweaks/fix-kde-nvidia-tearing.sh
 # tweaks/install-codecs.sh
 # tweaks/install-vulkan-radeon.sh
 

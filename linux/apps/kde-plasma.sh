@@ -12,16 +12,7 @@ if [[ $osname == $debianstable ]]; then
     sudo systemctl enable sddm
     sudo apt install plasma-nm -y
     sudo systemctl enable wpa_supplicant.service
-    sudo bash -c "cat > /etc/NetworkManager/NetworkManager.conf <<- EOM
-    [main]
-    plugins=ifupdown,keyfile
-
-    [ifupdown]
-    managed=true
-
-    [device]
-    wifi.scan-rand-mac-address=no
-    EOM"
+    sudo bash -c "cat strings/config-networkmanager-managed > /etc/NetworkManager/NetworkManager.conf"
 fi
 
 if [[ $osname == $debiansid ]]; then
@@ -29,16 +20,7 @@ if [[ $osname == $debiansid ]]; then
     sudo systemctl enable sddm
     sudo apt install plasma-nm -y
     sudo systemctl enable wpa_supplicant.service
-    sudo bash -c "cat > /etc/NetworkManager/NetworkManager.conf <<- EOM
-    [main]
-    plugins=ifupdown,keyfile
-
-    [ifupdown]
-    managed=true
-
-    [device]
-    wifi.scan-rand-mac-address=no
-    EOM"
+    sudo bash -c "cat strings/config-networkmanager-managed > /etc/NetworkManager/NetworkManager.conf"
 fi
 
 if [[ $osname == $fedora ]]; then

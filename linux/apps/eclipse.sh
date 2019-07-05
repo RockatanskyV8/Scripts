@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_eclipse="http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/photon/R/eclipse-java-photon-R-linux-gtk-x86_64.tar.gz"
+
 if [[ $osname == $archlinux ]]; then
     sudo pacman -S eclipse-java --noconfirm
 fi
@@ -12,18 +14,7 @@ if [[ $osname == $debianstable ]]; then
     sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
     sudo rm -r /tmp/eclipse
     sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
-    sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Eclipse 4.7
-    Comment=Eclipse
-    Exec=/usr/bin/eclipse
-    Icon=/usr/eclipse/icon.xpm
-    Categories=Development;IDE;
-    Terminal=false
-    Type=Application
-    StartupNotify=false
-    EOM"
+    sudo bash -c "cat strings/launcher-eclipse > /usr/share/applications/eclipse.desktop"
     sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi
 
@@ -34,18 +25,7 @@ if [[ $osname == $debiansid ]]; then
     sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
     sudo rm -r /tmp/eclipse
     sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
-    sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Eclipse 4.7
-    Comment=Eclipse
-    Exec=/usr/bin/eclipse
-    Icon=/usr/eclipse/icon.xpm
-    Categories=Development;IDE;
-    Terminal=false
-    Type=Application
-    StartupNotify=false
-    EOM"
+    sudo bash -c "cat strings/launcher-eclipse > /usr/share/applications/eclipse.desktop"
     sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi
 
@@ -56,18 +36,7 @@ if [[ $osname == $fedora ]]; then
     sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
     sudo rm -r /tmp/eclipse
     sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
-    sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Eclipse 4.7
-    Comment=Eclipse
-    Exec=/usr/bin/eclipse
-    Icon=/usr/eclipse/icon.xpm
-    Categories=Development;IDE;
-    Terminal=false
-    Type=Application
-    StartupNotify=false
-    EOM"
+    sudo bash -c "cat strings/launcher-eclipse > /usr/share/applications/eclipse.desktop"
 fi
 
 if [[ $osname == $ubuntults ]]; then
@@ -77,17 +46,6 @@ if [[ $osname == $ubuntults ]]; then
     sudo tar -zxvf /tmp/eclipse/eclipse.tar.gz -C /usr/
     sudo rm -r /tmp/eclipse
     sudo ln -s /usr/eclipse/eclipse /usr/bin/eclipse
-    sudo bash -c "cat >> /usr/share/applications/eclipse.desktop <<- EOM
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Eclipse 4.7
-    Comment=Eclipse
-    Exec=/usr/bin/eclipse
-    Icon=/usr/eclipse/icon.xpm
-    Categories=Development;IDE;
-    Terminal=false
-    Type=Application
-    StartupNotify=false
-    EOM"
+    sudo bash -c "cat strings/launcher-eclipse > /usr/share/applications/eclipse.desktop"
     sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 fi

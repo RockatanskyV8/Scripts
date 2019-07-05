@@ -7,9 +7,7 @@ fi
 
 if [[ $osname == $debianstable ]]; then
     sudo apt install netbeans -y
-    sudo bash -c "cat >> /usr/share/netbeans/8.1/etc/netbeans.conf <<- EOM
-    netbeans_default_options=\"-J-client -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-Dawt.useSystemAAFontSettings=on\"
-    EOM"
+    sudo bash -c "cat strings/config-netbeans >> /usr/share/netbeans/8.1/etc/netbeans.conf"
 fi
 
 if [[ $osname == $debiansid ]]; then

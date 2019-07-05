@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_vmware="http://download3.vmware.com/software/player/file/VMware-Player-15.0.4-12990004.x86_64.bundle"
+
 if [[ $osname == $archlinux ]]; then
     $missing
 fi

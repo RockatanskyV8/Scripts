@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_apache_tomcat="http://ftp.unicamp.br/pub/apache/tomcat/tomcat-9/v9.0.21/bin/apache-tomcat-9.0.21.zip"
+
 if [[ $osname == $archlinux ]]; then
     sudo mkdir /tmp/apache-tomcat
     sudo wget $link_apache_tomcat -O /tmp/apache-tomcat/apache-tomcat.zip

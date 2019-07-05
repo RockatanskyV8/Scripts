@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_pycharm="https://download.jetbrains.com/python/pycharm-community-2018.1.2.tar.gz"
+
 if [[ $osname == $archlinux ]]; then
     sudo pacman -S pycharm-community-edition --noconfirm
 fi
@@ -11,18 +13,7 @@ if [[ $osname == $debianstable ]]; then
     sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
     sudo tar xvzf /tmp/pycharm-community/pycharm-community.tar.gz --directory /opt
     sudo rm -r /tmp/pycharm-community
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=PyCharm Community Edition
-    Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
-    Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-pycharm-ce
-    EOM"
+    sudo bash -c "cat strings/launcher-pycharm-community > /usr/share/applications/pycharm-community.desktop"
 fi
 
 if [[ $osname == $debiansid ]]; then
@@ -31,18 +22,7 @@ if [[ $osname == $debiansid ]]; then
     sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
     sudo tar xvzf /tmp/pycharm-community/pycharm-community.tar.gz --directory /opt
     sudo rm -r /tmp/pycharm-community
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=PyCharm Community Edition
-    Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
-    Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-pycharm-ce
-    EOM"
+    sudo bash -c "cat strings/launcher-pycharm-community > /usr/share/applications/pycharm-community.desktop"
 fi
 
 if [[ $osname == $fedora ]]; then
@@ -51,18 +31,7 @@ if [[ $osname == $fedora ]]; then
     sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
     sudo tar xvzf /tmp/pycharm-community/pycharm-community.tar.gz --directory /opt
     sudo rm -r /tmp/pycharm-community
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=PyCharm Community Edition
-    Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
-    Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-pycharm-ce
-    EOM"
+    sudo bash -c "cat strings/launcher-pycharm-community > /usr/share/applications/pycharm-community.desktop"
 fi
 
 if [[ $osname == $ubuntults ]]; then
@@ -71,16 +40,5 @@ if [[ $osname == $ubuntults ]]; then
     sudo wget $link_pycharm -O /tmp/pycharm-community/pycharm-community.tar.gz
     sudo tar xvzf /tmp/pycharm-community/pycharm-community.tar.gz --directory /opt
     sudo rm -r /tmp/pycharm-community
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-pycharm-ce.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=PyCharm Community Edition
-    Icon=/opt/pycharm-community-2018.1.2/bin/pycharm.png
-    Exec=\"/opt/pycharm-community-2018.1.2/bin/pycharm.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-pycharm-ce
-    EOM"
+    sudo bash -c "cat strings/launcher-pycharm-community > /usr/share/applications/pycharm-community.desktop"
 fi

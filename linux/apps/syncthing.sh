@@ -11,12 +11,7 @@ if [[ $osname == $archlinux ]]; then
     if [[ $osname == $debianstable ]]; then
     sudo apt install syncthing -y
     sudo systemctl enable syncthing@$username.service
-    sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM
-    [syncthing]
-    title=Syncthing
-    description=Sycthing file synchronisation
-    ports=22000/tcp|21027/udp
-    EOM"
+    sudo bash -c "cat strings/ufw-syncthing > /etc/ufw/applications.d/syncthing-server"
     sudo ufw allow syncthing
     sudo ufw reload
 fi
@@ -38,12 +33,7 @@ fi
 if [[ $osname == $ubuntults ]]; then
     sudo apt install syncthing -y
     sudo systemctl enable syncthing@$username.service
-    sudo bash -c "cat >> /etc/ufw/applications.d/syncthing-server <<- EOM
-    [syncthing]
-    title=Syncthing
-    description=Sycthing file synchronisation
-    ports=22000/tcp|21027/udp
-    EOM"
+    sudo bash -c "cat strings/ufw-syncthing > /etc/ufw/applications.d/syncthing-server"
     sudo ufw allow syncthing
     sudo ufw reload
 fi

@@ -26,11 +26,7 @@ if [[ $osname == $archlinux ]]; then
     cd ..
     rm -rf libguestfs
     sudo pacman -S ovmf --noconfirm
-    sudo bash -c "cat >> /etc/libvirt/qemu.conf <<- EOM
-    nvram = [
-        \"/usr/share/ovmf/x64/OVMF_CODE.fd:/usr/share/ovmf/x64/OVMF_VARS.fd\"
-    ]
-    EOM"
+    sudo bash -c "cat strings/config-ovmf-nvram >> /etc/libvirt/qemu.conf"
     sudo pacman -S multipath-tools --noconfirm
 fi
 

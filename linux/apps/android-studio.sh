@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_android_studio="https://dl.google.com/dl/android/studio/ide-zips/3.1.0.16/android-studio-ide-173.4670197-linux.zip"
+
 if [[ $osname == $archlinux ]]; then
     sudo mount -o remount,size=16G /tmp
     echo "The machine can freeze, be patient"
@@ -19,18 +21,7 @@ if [[ $osname == $debianstable ]]; then
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
     sudo unzip /tmp/android-studio/android-studio.zip -d /opt
     sudo rm -r /tmp/android-studio
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=Android Studio
-    Icon=/opt/android-studio/bin/studio.png
-    Exec=\"/opt/android-studio/bin/studio.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-studio
-    EOM"
+    sudo bash -c "cat strings/launcher-android-studio > /usr/share/applications/android-studio.desktop"
     sudo mkdir /opt/android-sdk
     sudo chown $username -R /opt/android-sdk
 fi
@@ -41,18 +32,7 @@ if [[ $osname == $debiansid ]]; then
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
     sudo unzip /tmp/android-studio/android-studio.zip -d /opt
     sudo rm -r /tmp/android-studio
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=Android Studio
-    Icon=/opt/android-studio/bin/studio.png
-    Exec=\"/opt/android-studio/bin/studio.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-studio
-    EOM"
+    sudo bash -c "cat strings/launcher-android-studio > /usr/share/applications/android-studio.desktop"
     sudo mkdir /opt/android-sdk
     sudo chown $username -R /opt/android-sdk
 fi
@@ -62,18 +42,7 @@ if [[ $osname == $fedora ]]; then
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
     sudo unzip /tmp/android-studio/android-studio.zip -d /opt
     sudo rm -r /tmp/android-studio
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=Android Studio
-    Icon=/opt/android-studio/bin/studio.png
-    Exec=\"/opt/android-studio/bin/studio.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-studio
-    EOM"
+    sudo bash -c "cat strings/launcher-android-studio > /usr/share/applications/android-studio.desktop"
     sudo mkdir /opt/android-sdk
     sudo chown $username -R /opt/android-sdk
 fi
@@ -84,18 +53,7 @@ if [[ $osname == $ubuntults ]]; then
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
     sudo unzip /tmp/android-studio/android-studio.zip -d /opt
     sudo rm -r /tmp/android-studio
-    sudo bash -c "cat >> /usr/share/applications/jetbrains-studio.desktop <<- EOM
-    [Desktop Entry]
-    Version=1.0
-    Type=Application
-    Name=Android Studio
-    Icon=/opt/android-studio/bin/studio.png
-    Exec=\"/opt/android-studio/bin/studio.sh\" %f
-    Comment=The Drive to Develop
-    Categories=Development;IDE;
-    Terminal=false
-    StartupWMClass=jetbrains-studio
-    EOM"
+    sudo bash -c "cat strings/launcher-android-studio > /usr/share/applications/android-studio.desktop"
     sudo mkdir /opt/android-sdk
     sudo chown $username -R /opt/android-sdk
     sudo apt install qemu-kvm -y

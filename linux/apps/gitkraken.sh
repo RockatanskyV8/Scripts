@@ -1,6 +1,11 @@
 #!/bin/bash
 source config.sh
 
+link_gitkraken_libssl1_0="http://ftp.br.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb"
+link_gitkraken_deb="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
+link_gitkraken_targz="https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz"
+link_girkraken_icon="http://img.informer.com/icons_mac/png/128/422/422255.png"
+
 if [[ $osname == $archlinux ]]; then
     git clone https://aur.archlinux.org/gitkraken
     cd gitkraken
@@ -39,17 +44,7 @@ if [[ $osname == $fedora ]]; then
     sudo tar xvzf /tmp/gitkraken/gitkraken.tar.gz --directory /opt
     sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
     sudo cp /tmp/gitkraken/icon.png /opt/gitkraken
-    sudo bash -c "cat >> /usr/share/applications/gitkraken.desktop <<- EOM
-    [Desktop Entry]
-    Name=GitKraken
-    Comment=Graphical Git client
-    Exec=/opt/gitkraken/gitkraken
-    Icon=/opt/gitkraken/icon.png
-    Terminal=false
-    Type=Application
-    Encoding=UTF-8
-    Categories=Utility;Development;
-    EOM"
+    sudo bash -c "cat strings/launcher-gitkraken > /usr/share/applications/gitkraken.desktop"
     sudo rm -r /tmp/gitkraken
 fi
 

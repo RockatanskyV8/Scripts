@@ -1,0 +1,4 @@
+[samba]
+title=samba
+description=samba
+ports=139,445/tcp|137,138/udp

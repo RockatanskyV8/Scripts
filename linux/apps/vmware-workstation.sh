@@ -1,6 +1,8 @@
 #!/bin/bash
 source config.sh
 
+link_vmware_workstation="https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-15.0.4-12990004.x86_64.bundle"
+
 if [[ $osname == $archlinux ]]; then
     $missing
 fi
