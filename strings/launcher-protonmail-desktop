@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Proton Mail
+Comment=Secure Email desktop client
+GenericName=Mail Client
+X-GNOME-FullName=Proton Mail
+Exec=/opt/protonmail/protonmail %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/protonmail/icon.png
+Categories=Network;
+StartupNotify=true
