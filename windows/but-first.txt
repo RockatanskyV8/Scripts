@@ -1,2 +1,0 @@
-# run first in powershell as admin (manually)
-Set-ExecutionPolicy Unrestricted
