@@ -15,18 +15,7 @@ if [[ $osname == $archlinux ]]; then
     sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install lib32stdc++6 unzip -y
-    sudo mkdir /tmp/android-studio
-    sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
-    sudo unzip /tmp/android-studio/android-studio.zip -d /opt
-    sudo rm -r /tmp/android-studio
-    sudo bash -c "cat strings/launcher-android-studio > /usr/share/applications/android-studio.desktop"
-    sudo mkdir /opt/android-sdk
-    sudo chown $username -R /opt/android-sdk
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install lib32stdc++6 unzip -y
     sudo mkdir /tmp/android-studio
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip
@@ -47,7 +36,7 @@ if [[ $osname == $fedora ]]; then
     sudo chown $username -R /opt/android-sdk
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install lib32stdc++6 unzip -y
     sudo mkdir /tmp/android-studio
     sudo wget $link_android_studio -O /tmp/android-studio/android-studio.zip

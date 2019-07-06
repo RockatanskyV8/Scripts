@@ -9,11 +9,7 @@ if [[ $osname == $archlinux ]]; then
     rm -rf minitube-aur
 fi
 
-if [[ $osname == $debianstable ]]; then
-    $missing
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install minitube -y
 fi
 
@@ -21,6 +17,6 @@ if [[ $osname == $fedora ]]; then
     $incompatible
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

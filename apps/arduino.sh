@@ -8,12 +8,7 @@ if [[ $osname == $archlinux ]]; then
     sudo usermod -aG lock
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install arduino -y
-    sudo usermod -aG dialout $username
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install arduino -y
     sudo usermod -aG dialout $username
 fi
@@ -23,7 +18,7 @@ if [[ $osname == $fedora ]]; then
     sudo usermod -aG dialout $username
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install arduino -y
     sudo usermod -aG dialout $username
 fi

@@ -5,11 +5,7 @@ if [[ $osname == $archlinux ]]; then
     sudo bash -c "cat strings/config-flat-volumes >> /etc/pulse/daemon.conf"
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo bash -c "cat strings/config-flat-volumes >> /etc/pulse/daemon.conf"
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo bash -c "cat strings/config-flat-volumes >> /etc/pulse/daemon.conf"
 fi
 
@@ -17,6 +13,6 @@ if [[ $osname == $fedora ]]; then
     sudo bash -c "cat strings/config-flat-volumes >> /etc/pulse/daemon.conf"
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

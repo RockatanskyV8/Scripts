@@ -12,15 +12,7 @@ if [[ $osname == $archlinux ]]; then
     rm -rf google-chrome
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install libappindicator3-1 -y
-    sudo mkdir /tmp/google-chrome
-    sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb
-    sudo dpkg -i /tmp/google-chrome/google-chrome.deb
-    sudo rm -r /tmp/google-chrome
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install libappindicator3-1 -y
     sudo mkdir /tmp/google-chrome
     sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb
@@ -35,7 +27,7 @@ if [[ $osname == $fedora ]]; then
     sudo rm -r /tmp/google-chrome
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install libappindicator3-1 -y
     sudo mkdir /tmp/google-chrome
     sudo wget $link_google_chrome_deb -O /tmp/google-chrome/google-chrome.deb

@@ -8,14 +8,7 @@ if [[ $osname == $archlinux ]]; then
     sudo ufw reload
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install kdeconnect -y
-    sudo bash -c "cat strings/ufw-kdeconnect > /etc/ufw/applications.d/kdeconnect"
-    sudo ufw allow kdeconnect
-    sudo ufw reload
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install kdeconnect -y
     sudo bash -c "cat strings/ufw-kdeconnect > /etc/ufw/applications.d/kdeconnect"
     sudo ufw allow kdeconnect
@@ -26,7 +19,7 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install kde-connect -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install kdeconnect -y
     sudo bash -c "cat strings/ufw-kdeconnect > /etc/ufw/applications.d/kdeconnect"
     sudo ufw allow kdeconnect

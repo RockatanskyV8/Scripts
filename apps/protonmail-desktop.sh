@@ -16,19 +16,7 @@ if [[ $osname == $archlinux ]]; then
     sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo mkdir /tmp/protonmail
-    sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
-    sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
-    sudo mkdir /opt/protonmail
-    sudo mv /tmp/protonmail/icon.png /opt/protonmail
-    sudo mv /tmp/protonmail/protonmail /opt/protonmail
-    sudo chmod +x /opt/protonmail/protonmail
-    sudo bash -c "cat strings/launcher-protonmail-desktop > /usr/share/applications/protonmail-desktop.desktop"
-    sudo rm -r /tmp/protonmail
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo mkdir /tmp/protonmail
     sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
     sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail
@@ -52,7 +40,7 @@ if [[ $osname == $fedora ]]; then
     sudo rm -r /tmp/protonmail
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo mkdir /tmp/protonmail
     sudo wget $link_protonmail_desktop_icon -O /tmp/protonmail/icon.png
     sudo wget $link_protonmail_desktop -O /tmp/protonmail/protonmail

@@ -6,17 +6,9 @@ if [[ $osname == $archlinux ]]; then
     sudo systemctl enable syncthing@$username.service
     sudo ufw allow syncthing
     sudo ufw reload
-    fi
-
-    if [[ $osname == $debianstable ]]; then
-    sudo apt install syncthing -y
-    sudo systemctl enable syncthing@$username.service
-    sudo bash -c "cat strings/ufw-syncthing > /etc/ufw/applications.d/syncthing-server"
-    sudo ufw allow syncthing
-    sudo ufw reload
 fi
 
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install syncthing -y
     sudo systemctl enable syncthing@$username.service
     sudo ufw allow syncthing
@@ -30,7 +22,7 @@ if [[ $osname == $fedora ]]; then
     sudo firewall-cmd --reload
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install syncthing -y
     sudo systemctl enable syncthing@$username.service
     sudo bash -c "cat strings/ufw-syncthing > /etc/ufw/applications.d/syncthing-server"

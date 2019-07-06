@@ -24,11 +24,7 @@ if [[ $osname == $archlinux ]]; then
     sudo rm /usr/share/applications/nm-connection-editor.desktop
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt purge mutt tracker -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt purge mutt tracker -y
 fi
 
@@ -53,6 +49,6 @@ if [[ $osname == $fedora ]]; then
     sudo dnf remove flatpak -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

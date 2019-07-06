@@ -8,11 +8,7 @@ if [[ $osname == $archlinux ]]; then
     sudo systemctl enable NetworkManager.service
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install gnome-core -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install gnome-core -y
 fi
 
@@ -20,6 +16,6 @@ if [[ $osname == $fedora ]]; then
     $missing
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

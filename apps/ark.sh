@@ -5,11 +5,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S ark unrar unzip p7zip --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install ark unar unzip p7zip p7zip-full -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install ark unar unzip p7zip p7zip-full -y
 fi
 
@@ -17,6 +13,6 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install ark -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

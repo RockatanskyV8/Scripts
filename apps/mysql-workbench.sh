@@ -7,18 +7,14 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S mysql-workbench --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install mysql-workbench -y
-fi
-
-if [[ $osname == $debiansid ]]; then
-    sudo apt install mysql-workbench -y
+if [[ $osname == $debian ]]; then
+    $missing
 fi
 
 if [[ $osname == $fedora ]]; then
     sudo dnf install $link_mysql_workbench_rpm -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install mysql-workbench -y
 fi

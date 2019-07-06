@@ -5,11 +5,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S libreoffice --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install libreoffice libreoffice-kde -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install libreoffice libreoffice-kde -y
 fi
 
@@ -18,6 +14,6 @@ if [[ $osname == $fedora ]]; then
     sudo rm /usr/share/applications/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64-policytool.desktop
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install libreoffice libreoffice-kde -y
 fi

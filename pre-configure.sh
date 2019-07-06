@@ -1,115 +1,57 @@
 #!/bin/bash
 source config.sh
 
+link_rpmfusionfree="https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+link_rpmfusionnonfree="https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+
+# grant execution permission to all .sh files
+find . -name "*.sh" -exec chmod +x {} \;
+
 if [[ $osname == $archlinux ]]; then
-sudo chmod +x *
-sudo chmod +x apps/*
-sudo chmod +x tweaks/*
+    sudo bash -c "cat strings/config-arch-repo >> /etc/pacman.conf"
+    sudo pacman -Syyu
 
-sudo bash -c "cat >> /etc/pacman.conf <<- EOM
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-EOM"
-sudo pacman -Syyu
+    sudo pacman -S git unzip wget fuse python-pip --noconfirm
 
-sudo pacman -S git unzip wget fuse python-pip --noconfirm
-
-sudo pacman -S ufw --noconfirm
-sudo ufw enable
-sudo systemctl enable ufw
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw reload
+    sudo pacman -S ufw --noconfirm
+    sudo ufw enable
+    sudo systemctl enable ufw
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw reload
 fi
 
-if [[ $osname == $debianstable ]]; then
-sudo chmod +x *
-sudo chmod +x apps/*
-sudo chmod +x tweaks/*
+if [[ $osname == $debian ]]; then
+    sudo bash -c "cat strings/config-debian-repo > /etc/apt/sources.list"
 
-sudo dpkg --add-architecture i386
-sudo apt update
+    sudo dpkg --add-architecture i386
+    sudo apt update
+    sudo apt dist-upgrade -y
 
-sudo apt install git unzip wget fuse python3-pip -y
+    sudo apt install git unzip wget fuse python3-pip -y
 
-sudo apt install ufw -y
-sudo ufw enable
-sudo systemctl enable ufw
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-
-sudo bash -c "cat > /etc/apt/sources.list <<- EOM
-deb http://ftp.br.debian.org/debian/ stable main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ stable main contrib non-free
-
-deb http://security.debian.org/debian-security stable/updates main contrib non-free
-deb-src http://security.debian.org/debian-security stable/updates main contrib non-free
-
-deb http://ftp.br.debian.org/debian/ stable-updates main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ stable-updates main contrib non-free
-EOM"
-
-sudo apt update
-sudo apt dist-upgrade -y
-fi
-
-if [[ $osname == $debiansid ]]; then
-sudo chmod +x *
-sudo chmod +x apps/*
-sudo chmod +x tweaks/*
-
-sudo dpkg --add-architecture i386
-sudo apt update
-
-sudo apt install git unzip wget fuse python3-pip -y
-
-sudo apt install ufw -y
-sudo ufw enable
-sudo systemctl enable ufw
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-
-sudo bash -c "cat > /etc/apt/sources.list <<- EOM
-deb http://ftp.br.debian.org/debian/ unstable main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ unstable main contrib non-free
-EOM"
-
-sudo bash -c "cat > /etc/apt/preferences.d/stable.pref <<- EOM
-Package: *
-Pin: release a=stable
-Pin-Priority: 50
-EOM"
-
-sudo bash -c "cat > /etc/apt/sources.list.d/stable.list <<- EOM
-deb http://ftp.br.debian.org/debian/ stable main contrib non-free
-deb-src http://ftp.br.debian.org/debian/ stable main contrib non-free
-EOM"
-
-sudo apt update
-sudo apt dist-upgrade -y
+    sudo apt install ufw -y
+    sudo ufw enable
+    sudo systemctl enable ufw
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
 fi
 
 if [[ $osname == $fedora ]]; then
-sudo chmod +x *
-sudo chmod +x apps/*
-sudo chmod +x tweaks/*
+    sudo dnf install $link_rpmfusionfree -y
+    sudo dnf install $link_rpmfusionnonfree -y
 
-sudo su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y'
-sudo dnf install git unzip wget fuse python-pip -y
+    sudo dnf install git unzip wget fuse python-pip -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
-sudo chmod +x *
-sudo chmod +x apps/*
-sudo chmod +x tweaks/*
+if [[ $osname == $ubuntu ]]; then
+    sudo apt install tasksel -y
 
-sudo apt install tasksel -y
+    sudo apt install git unzip wget fuse python3-pip -y
 
-sudo apt install git unzip wget fuse python3-pip -y
-
-sudo apt install ufw -y
-sudo ufw enable
-sudo systemctl enable ufw
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
+    sudo apt install ufw -y
+    sudo ufw enable
+    sudo systemctl enable ufw
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
 fi

@@ -7,11 +7,7 @@ if [[ $osname == $archlinux ]]; then
     sudo wget $link_someonewhocares_hosts -O /etc/hosts
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo wget $link_someonewhocares_hosts -O /etc/hosts
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo wget $link_someonewhocares_hosts -O /etc/hosts
 fi
 
@@ -19,6 +15,6 @@ if [[ $osname == $fedora ]]; then
     sudo wget $link_someonewhocares_hosts -O /etc/hosts
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo wget $link_someonewhocares_hosts -O /etc/hosts
 fi

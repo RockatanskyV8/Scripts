@@ -7,15 +7,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S xdg-user-dirs --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install kde-plasma-desktop sddm-theme-debian-breeze -y
-    sudo systemctl enable sddm
-    sudo apt install plasma-nm -y
-    sudo systemctl enable wpa_supplicant.service
-    sudo bash -c "cat strings/config-networkmanager-managed > /etc/NetworkManager/NetworkManager.conf"
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install kde-plasma-desktop sddm-theme-debian-breeze -y
     sudo systemctl enable sddm
     sudo apt install plasma-nm -y
@@ -28,6 +20,6 @@ if [[ $osname == $fedora ]]; then
     #sudo dnf install breeze-gtk -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

@@ -5,14 +5,7 @@ if [[ $osname == $archlinux ]]; then
     $missing
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install retroarch -y
-    sudo apt install libretro-* -y
-    sudo apt purge gnome-games-app -y
-    sudo adduser $username input
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install retroarch -y
     sudo apt install libretro-* -y
     sudo apt purge gnome-games-app -y
@@ -23,7 +16,7 @@ if [[ $osname == $fedora ]]; then
     $missing
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install retroarch -y
     sudo apt install libretro-* -y
     sudo apt purge gnome-games-app -y

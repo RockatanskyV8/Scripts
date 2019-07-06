@@ -6,11 +6,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -R kwrite --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    $missing
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     $missing
 fi
 
@@ -57,6 +53,6 @@ if [[ $osname == $fedora ]]; then
     sudo dnf remove system-config-users -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

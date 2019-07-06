@@ -4,8 +4,7 @@
 
 # uncomment the lines you want to install
 
-# see the compatibility sheet for what commands work on what distros
-# most of the time unsupported commands will simply not work
+# there are scripts missing for some distros, it should give you a message if you try to run one of them
 
 # some packages are taken for granted by the scripts and will be installed in pre-configure.sh
 # ./pre-configure.sh
@@ -14,7 +13,7 @@
 # apps/kde-plasma.sh
 # apps/gnome-shell.sh
 
-# removes some unnecessary packages from the desktop environment install
+# removes some bloat from the desktop environment installation (can remove more than what you want, please check the script)
 # tweaks/kde-cleaner.sh
 # tweaks/gnome-cleaner.sh
 
@@ -58,7 +57,7 @@
 # apps/lutris.sh
 # apps/freetube.sh
 # apps/vmware-player.sh
-# apps/vmware-workstation.sh
+# apps/vmware-pro.sh
 # apps/protonmail-desktop.sh
 # apps/retroarch.sh
 # apps/samba.sh
@@ -70,7 +69,6 @@
 # apps/gitkraken.sh
 # apps/vscode.sh
 # apps/allegro.sh
-# apps/netbeans.sh
 # apps/arduino.sh
 # apps/eclipse.sh
 # apps/android-studio.sh

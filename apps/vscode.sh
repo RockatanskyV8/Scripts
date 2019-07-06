@@ -12,17 +12,7 @@ if [[ $osname == $archlinux ]]; then
     rm -rf visual-studio-code-bin
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo mkdir /tmp/code
-    sudo wget $link_vscode_key -O /tmp/code/code.asc
-    sudo apt-key add /tmp/code/code.asc
-    sudo rm -r /tmp/code
-    sudo bash -c "cat strings/config-vscode-deb-repo > /etc/apt/sources.list.d/vscode.list"
-    sudo apt update
-    sudo apt install code -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo mkdir /tmp/code
     sudo wget $link_vscode_key -O /tmp/code/code.asc
     sudo apt-key add /tmp/code/code.asc
@@ -36,7 +26,7 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install $link_vscode_rpm -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo mkdir /tmp/code
     sudo wget $link_vscode_key -O /tmp/code/code.asc
     sudo apt-key add /tmp/code/code.asc

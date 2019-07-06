@@ -8,12 +8,10 @@ if [[ $osname == $archlinux ]]; then
     sudo ufw reload
 fi
 
-if [[ $osname == $debianstable ]]; then
-    $missing
-fi
-
-if [[ $osname == $debiansid ]]; then
-    $missing
+if [[ $osname == $debian ]]; then
+    sudo apt install ssh -y
+    sudo ufw allow ssh
+    sudo ufw reload
 fi
 
 if [[ $osname == $fedora ]]; then
@@ -22,6 +20,6 @@ if [[ $osname == $fedora ]]; then
     sudo firewall-cmd --reload
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

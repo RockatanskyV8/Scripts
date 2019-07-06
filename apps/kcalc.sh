@@ -5,11 +5,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S kcalc --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install kcalc -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install kcalc -y
 fi
 
@@ -17,6 +13,6 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install kcalc -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

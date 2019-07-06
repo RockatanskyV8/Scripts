@@ -5,18 +5,14 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S keepassxc --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    $missing
-fi
-
-if [[ $osname == $debiansid ]]; then
-    $missing
+if [[ $osname == $debian ]]; then
+    sudo apt install keepassxc -y
 fi
 
 if [[ $osname == $fedora ]]; then
     sudo dnf install keepassxc -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

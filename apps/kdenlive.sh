@@ -5,11 +5,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S kdenlive frei0r-plugins --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install kdenlive -y
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install kdenlive -y
 fi
 
@@ -17,6 +13,6 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install kdenlive -y
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install kdenlive -y
 fi

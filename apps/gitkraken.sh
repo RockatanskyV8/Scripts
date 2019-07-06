@@ -14,18 +14,7 @@ if [[ $osname == $archlinux ]]; then
     rm -rf gitkraken
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install gconf2 gvfs-bin -y
-    sudo apt install libgnome-keyring-common libgnome-keyring-dev -y
-    sudo mkdir /tmp/gitkraken
-    sudo wget $link_gitkraken_libssl1_0 -O /tmp/gitkraken/libssl1_0.deb
-    sudo dpkg -i /tmp/gitkraken/libssl1_0.deb
-    sudo wget $link_gitkraken_deb -O /tmp/gitkraken/gitkraken.deb
-    sudo dpkg -i /tmp/gitkraken/gitkraken.deb
-    sudo rm -r /tmp/gitkraken
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install gconf2 gvfs-bin -y
     sudo apt install libgnome-keyring-common libgnome-keyring-dev -y
     sudo mkdir /tmp/gitkraken
@@ -48,7 +37,7 @@ if [[ $osname == $fedora ]]; then
     sudo rm -r /tmp/gitkraken
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install gconf2 gvfs-bin -y
     sudo mkdir /tmp/gitkraken
     sudo wget $link_gitkraken_deb -O /tmp/gitkraken/gitkraken.deb

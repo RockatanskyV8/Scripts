@@ -6,12 +6,7 @@ if [[ $osname == $archlinux ]]; then
     sudo bash -c "cat strings/config-flat-accelprofile > /etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo mkdir /etc/X11/xorg.conf.d
-    sudo bash -c "cat strings/config-flat-accelprofile > /etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo mkdir /etc/X11/xorg.conf.d
     sudo bash -c "cat strings/config-flat-accelprofile > /etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 fi
@@ -21,7 +16,7 @@ if [[ $osname == $fedora ]]; then
     sudo bash -c "cat strings/config-flat-accelprofile > /etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo mkdir /etc/X11/xorg.conf.d
     sudo bash -c "cat strings/config-flat-accelprofile > /etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
 fi

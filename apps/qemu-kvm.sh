@@ -30,17 +30,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S multipath-tools --noconfirm
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install qemu-kvm -y
-    sudo apt install libvirt-clients -y
-    sudo apt install libvirt-daemon-system -y
-    sudo apt install virt-manager -y
-    sudo apt install libguestfs-tools -y
-    sudo adduser $username libvirt
-    sudo adduser $username libvirt-qemu
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install qemu-kvm -y
     sudo apt install libvirt-clients -y
     sudo apt install libvirt-daemon-system -y
@@ -57,6 +47,6 @@ if [[ $osname == $fedora ]]; then
     sudo systemctl enable libvirtd
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi

@@ -11,16 +11,7 @@ if [[ $osname == $archlinux ]]; then
     sudo ufw reload
 fi
 
-if [[ $osname == $debianstable ]]; then
-    sudo apt install samba -y
-    sudo systemctl enable smbd
-    sudo bash -c "cat strings/config-samba > /etc/samba/smb.conf"
-    sudo smbpasswd -a $username
-    sudo ufw allow samba
-    sudo ufw reload
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     sudo apt install samba -y
     sudo systemctl enable smbd
     sudo bash -c "cat strings/config-samba > /etc/samba/smb.conf"
@@ -38,7 +29,7 @@ if [[ $osname == $fedora ]]; then
     sudo firewall-cmd --reload
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     sudo apt install samba -y
     sudo systemctl enable smbd
     sudo bash -c "cat strings/config-samba > /etc/samba/smb.conf"

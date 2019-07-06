@@ -14,18 +14,7 @@ if [[ $osname == $archlinux ]]; then
     fc-cache -fv
 fi
 
-if [[ $osname == $debianstable ]]; then
-    mkdir "/home/$username/.config"
-    mkdir "/home/$username/.config/fontconfig"
-    sudo bash -c "cat strings/config-fonts > /home/$username/.config/fontconfig/fonts.conf"
-    sudo bash -c "cat strings/config-xresources > /home/$username/.Xresources"
-    xrdb -merge /home/$username/.Xresources
-    fc-cache -fv
-    sudo dpkg-reconfigure fontconfig-config
-    sudo dpkg-reconfigure fontconfig
-fi
-
-if [[ $osname == $debiansid ]]; then
+if [[ $osname == $debian ]]; then
     mkdir "/home/$username/.config"
     mkdir "/home/$username/.config/fontconfig"
     sudo bash -c "cat strings/config-fonts > /home/$username/.config/fontconfig/fonts.conf"
@@ -45,6 +34,6 @@ if [[ $osname == $fedora ]]; then
     fc-cache -fv
 fi
 
-if [[ $osname == $ubuntults ]]; then
+if [[ $osname == $ubuntu ]]; then
     $missing
 fi
