@@ -1,9 +1,6 @@
 #!/bin/bash
 source config.sh
 
-link_rpmfusionfree="https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
-link_rpmfusionnonfree="https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
-
 # grant execution permission to all .sh files
 find . -name "*.sh" -exec chmod +x {} \;
 
@@ -38,6 +35,9 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
+    link_rpmfusionfree="https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+    link_rpmfusionnonfree="https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+
     sudo dnf install $link_rpmfusionfree -y
     sudo dnf install $link_rpmfusionnonfree -y
 
