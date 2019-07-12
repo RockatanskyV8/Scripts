@@ -79,6 +79,8 @@
 # apps/python-nuitka.sh
 # apps/python-youtube-dl.sh
 # apps/python-kivy.sh
+# apps/postgresql.sh
+# apps/nodejs.sh
 # apps/mysql-workbench.sh
 # apps/lamp-stack.sh
 # apps/apache-tomcat.sh
