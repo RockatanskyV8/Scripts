@@ -33,7 +33,7 @@ if [[ $osname == $debian ]]; then
     sudo ufw default deny incoming
     sudo ufw default allow outgoing
     
-    sudo apt install firmware-linux-free firmware-linux-nonfree -y
+    sudo apt install 'firmware-[^microbit-micropython*]*' -y
 fi
 
 if [[ $osname == $fedora ]]; then
