@@ -32,6 +32,8 @@ if [[ $osname == $debian ]]; then
     sudo systemctl enable ufw
     sudo ufw default deny incoming
     sudo ufw default allow outgoing
+    
+    sudo apt install firmware-linux-free firmware-linux-nonfree -y
 fi
 
 if [[ $osname == $fedora ]]; then
