@@ -13,9 +13,6 @@
 # apps/kde-plasma.sh
 # apps/gnome-shell.sh
 
-# window managers
-# apps/i3.sh
-
 # removes some bloat from the desktop environment installation (can remove more than what you want, please check the script)
 # tweaks/kde-cleaner.sh
 # tweaks/gnome-cleaner.sh
