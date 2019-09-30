@@ -12,6 +12,7 @@
 # desktop environments
 # apps/kde-plasma.sh
 # apps/gnome-shell.sh
+# apps/xfce.sh
 
 # removes some bloat from the desktop environment installation (can remove more than what you want, please check the script)
 # tweaks/kde-cleaner.sh
@@ -39,6 +40,9 @@
 
 # basic apps for gnome
 # apps/gnome-tweak-tool.sh
+
+# basic apps for xfce
+# apps/xfce-goodies.sh
 
 # general apps
 # apps/syncthing.sh
