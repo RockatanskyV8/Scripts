@@ -28,6 +28,7 @@
 # tweaks/fix-kde-nvidia-tearing.sh
 # tweaks/install-codecs.sh
 # tweaks/install-vulkan-radeon.sh
+# tweaks/install-kvantum.sh # kvantum and qt5ct will help you set qt themes on gtk destkop environments
 
 # basic apps for kde
 # apps/ark.sh
