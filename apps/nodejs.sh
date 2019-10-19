@@ -11,7 +11,7 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    $missing
+    sudo dnf install nodejs -y
 fi
 
 if [[ $osname == $ubuntu ]]; then

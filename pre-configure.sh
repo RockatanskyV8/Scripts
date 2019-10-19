@@ -1,9 +1,6 @@
 #!/bin/bash
 source config.sh
 
-# grant execution permission to all .sh files
-find . -name "*.sh" -exec chmod +x {} \;
-
 if [[ $osname == $archlinux ]]; then
     sudo bash -c "cat strings/config-arch-repo >> /etc/pacman.conf"
     sudo pacman -Syyu
@@ -43,7 +40,7 @@ if [[ $osname == $fedora ]]; then
     sudo dnf install $link_rpmfusionfree -y
     sudo dnf install $link_rpmfusionnonfree -y
 
-    sudo dnf install git unzip wget fuse python-pip -y
+    sudo dnf install gcc git unzip wget fuse python-pip -y
 fi
 
 if [[ $osname == $ubuntu ]]; then

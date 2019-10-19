@@ -14,6 +14,7 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
+    sudo dnf install python3-devel mesa-libGL-devel -y
     sudo pip3 install cython
     sudo pip3 install pygame
     sudo pip3 install git+https://github.com/kivy/kivy.git@master

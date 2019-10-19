@@ -10,7 +10,9 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    $missing
+    sudo dnf install mousepad -y
+    sudo dnf install xfce-whiskermenu-plugin -y
+    sudo dnf install file-roller -y
 fi
 
 if [[ $osname == $ubuntu ]]; then

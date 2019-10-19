@@ -16,8 +16,9 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    $missing
-    #sudo dnf install breeze-gtk -y
+    sudo dnf install @kde-desktop-environment -y
+    sudo dnf install breeze-gtk -y
+    sudo systemctl enable sddm
 fi
 
 if [[ $osname == $ubuntu ]]; then

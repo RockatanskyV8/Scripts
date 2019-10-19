@@ -11,7 +11,7 @@ fi
 
 if [[ $osname == $fedora ]]; then
     sudo dnf install libreoffice -y
-    sudo rm /usr/share/applications/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64-policytool.desktop
+    sudo rm /usr/share/applications/java-1.8.0-openjdk-1.8.0.222.b10-1.fc31.x86_64-policytool.desktop
 fi
 
 if [[ $osname == $ubuntu ]]; then

@@ -7,7 +7,7 @@ osname=$(IFS="=" read -ra ADDR <<< $(cat /etc/os-release | grep PRETTY_NAME); ec
 # should match /etc/os-release PRETTY_NAME string
 debian="Debian GNU/Linux 10 (buster)"
 ubuntu="Ubuntu 18.04.3 LTS"
-fedora="Fedora 30 (Workstation Edition)"
+fedora="Fedora 31 (Thirty One)"
 archlinux="Arch Linux"
 
 # what runs on these conditions

@@ -8,6 +8,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S dmidecode --noconfirm
     sudo pacman -S virt-manager --noconfirm
     sudo systemctl enable libvirtd
+    sudo sed -i 's/ExecStart=\/usr\/bin\/libvirtd --timeout 120 $LIBVIRTD_ARGS/ExecStart=\/usr\/bin\/libvirtd $LIBVIRTD_ARGS/' "/etc/systemd/system/multi-user.target.wants/libvirtd.service"
     sudo usermod -aG libvirt $username
     sudo usermod -aG kvm $username
     sudo pacman -S ebtables --noconfirm

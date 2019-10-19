@@ -10,6 +10,7 @@ if [[ $osname == $archlinux ]]; then
     sudo pacman -S networkmanager --noconfirm
     sudo pacman -S pulseaudio --noconfirm
     sudo pacman -S pavucontrol --noconfirm
+    sudo pacman -S file-roller --noconfirm
     sudo systemctl enable lightdm.service
     sudo systemctl enable NetworkManager.service
 fi
@@ -19,7 +20,8 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    $missing
+    sudo dnf install @xfce-desktop-environment -y
+    sudo systemctl enable lightdm
 fi
 
 if [[ $osname == $ubuntu ]]; then

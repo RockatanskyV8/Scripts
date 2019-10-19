@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# grant execution permission to all .sh files
+find . -name "*.sh" -exec chmod +x {} \;
+
 # your linux user must have access to sudo
 
 # uncomment the lines you want to install
@@ -72,7 +75,7 @@
 # development tools
 # apps/git.sh
 # apps/gitkraken.sh
-# apps/vscode.sh
+# apps/vscodium.sh
 # apps/allegro.sh
 # apps/arduino.sh
 # apps/eclipse.sh

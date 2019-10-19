@@ -2,7 +2,7 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-    sudo pacman -S kdeconnect --noconfirm
+    sudo pacman -S kdeconnect sshfs --noconfirm
     sudo bash -c "cat strings/ufw-kdeconnect > /etc/ufw/applications.d/kdeconnect"
     sudo ufw allow kdeconnect
     sudo ufw reload
