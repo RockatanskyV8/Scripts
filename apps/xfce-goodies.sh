@@ -11,7 +11,7 @@ fi
 
 if [[ $osname == $fedora ]]; then
     sudo dnf install mousepad -y
-    sudo dnf install xfce-whiskermenu-plugin -y
+    sudo dnf install xfce4-whiskermenu-plugin -y
     sudo dnf install file-roller -y
 fi
 
