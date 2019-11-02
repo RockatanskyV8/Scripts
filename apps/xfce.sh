@@ -22,6 +22,8 @@ fi
 if [[ $osname == $fedora ]]; then
     sudo dnf install @xfce-desktop-environment -y
     sudo systemctl enable lightdm
+    sudo systemctl set-default graphical.target
+    sudo dracut -f
 fi
 
 if [[ $osname == $ubuntu ]]; then

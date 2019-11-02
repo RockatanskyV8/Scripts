@@ -11,6 +11,7 @@ fi
 
 if [[ $osname == $fedora ]]; then
     sudo dnf install clementine -y
+    sudo rm /usr/share/applications/projectM-pulseaudio.desktop
 fi
 
 if [[ $osname == $ubuntu ]]; then

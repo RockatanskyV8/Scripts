@@ -15,7 +15,7 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    sudo dnf install postgresql-server postgresql
+    sudo dnf install postgresql-server postgresql -y
     sudo postgresql-setup initdb
     sudo systemctl enable postgresql
     # sudo su -c "passwd postgres"

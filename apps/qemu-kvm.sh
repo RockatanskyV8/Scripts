@@ -46,6 +46,7 @@ if [[ $osname == $fedora ]]; then
     sudo usermod -a -G libvirt $username
     sudo usermod -a -G qemu $username
     sudo systemctl enable libvirtd
+    sudo sed -i "s/--timeout 120//" "/etc/sysconfig/libvirtd"
 fi
 
 if [[ $osname == $ubuntu ]]; then
