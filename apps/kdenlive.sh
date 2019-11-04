@@ -10,7 +10,7 @@ if [[ $osname == $debian ]]; then
 fi
 
 if [[ $osname == $fedora ]]; then
-    sudo dnf install kdenlive -y
+    sudo dnf install kdenlive frei0r-plugins -y
 fi
 
 if [[ $osname == $ubuntu ]]; then
