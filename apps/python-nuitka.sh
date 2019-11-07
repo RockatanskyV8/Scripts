@@ -2,17 +2,17 @@
 source config.sh
 
 if [[ $osname == $archlinux ]]; then
-    sudo pip install nuitka
+    pip3 install --user nuitka
 fi
 
 if [[ $osname == $debian ]]; then
-    sudo pip3 install nuitka
+    pip3 install --user nuitka
 fi
 
 if [[ $osname == $fedora ]]; then
-    sudo pip3 install nuitka
+    pip3 install --user nuitka
 fi
 
 if [[ $osname == $ubuntu ]]; then
-    sudo pip3 install nuitka
+    pip3 install --user nuitka
 fi
