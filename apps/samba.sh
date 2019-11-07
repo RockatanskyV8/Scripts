@@ -27,7 +27,7 @@ if [[ $osname == $fedora ]]; then
     sudo smbpasswd -a $username
     sudo firewall-cmd --add-service=samba --permanent
     sudo firewall-cmd --reload
-    sudo run setsebool -P samba_domain_controller on
+    sudo setsebool -P samba_domain_controller on
     # run 'sudo chcon -t samba_share_t /path/to/folder -R' to allow samba to access a folder mounted under /
     # if running VMs on libvirt, also run sudo firewall-cmd --zone=libvirt --add-service=samba --permanent && sudo firewall-cmd --reload to allow them to access shared folders from the virbr0 interface
 fi
