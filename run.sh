@@ -80,7 +80,6 @@ find . -name "*.sh" -exec chmod +x {} \;
 # apps/arduino.sh
 # apps/eclipse.sh
 # apps/android-studio.sh
-# apps/python.sh
 # apps/pycharm-community.sh
 # apps/python-eyed3.sh
 # apps/python-xlsxwriter.sh
