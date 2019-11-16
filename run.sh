@@ -3,6 +3,24 @@
 # grant execution permission to all .sh files
 find . -name "*.sh" -exec chmod +x {} \;
 
+#fedora 31 installation process:
+./pre-configure.sh
+apps/kde-plasma.sh
+tweaks/kde-cleaner.sh
+tweaks/improve-font-rendering.sh
+tweaks/install-extra-fonts.sh
+tweaks/fix-sudden-volume-spikes.sh
+tweaks/install-codecs.sh
+apps/ark.sh
+apps/kdeconnect.sh
+apps/kcalc.sh
+apps/okular.sh
+apps/spectacle.sh
+apps/gwenview.sh
+apps/partitionmanager.sh
+apps/firefox.sh
+apps/vlc.sh
+
 # your linux user must have access to sudo
 
 # uncomment the lines you want to install
